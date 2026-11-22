@@ -119,13 +119,13 @@ def render(entries: list[dict]) -> str:
             href = html.escape(item["url"], quote=True)
             day = html.escape(item["published"][:10])
             chunks.append(
-                '<article class="radar-card">'
+                f'<a class="radar-card" href="{href}" target="_blank" rel="noopener noreferrer nofollow" aria-label="Open official {promotion} source: {title}">'
                 f'<div class="radar-meta"><span>{promotion} OFFICIAL VIDEO</span> <time datetime="{day}">{day}</time></div>'
                 f'<h3>{title}</h3>'
                 '<p>New upload listed by the promotion’s official YouTube channel. '
                 'This is a source link, not an independently verified news article.</p>'
-                f'<a href="{href}" target="_blank" rel="noopener noreferrer nofollow">WATCH OFFICIAL SOURCE ↗</a>'
-                '</article>'
+                '<span class="radar-open">WATCH OFFICIAL SOURCE ↗</span>'
+                '</a>'
             )
         cards = "\n".join(chunks)
     return (
