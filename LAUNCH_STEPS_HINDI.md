@@ -55,3 +55,6 @@
 - Google AdSense: https://adsense.google.com/
 
 **Next action:** सबसे पहले STEP 1 पूरा करें। फिर website working URL या GitHub run status से deployment validate किया जा सकेगा।
+
+## Important hosting note (business use)
+GitHub Pages को केवल prototype/preview के लिए इस्तेमाल करें। GitHub Pages की official limits policy इसे free hosting के रूप में online business चलाने के लिए intended/allowed नहीं मानती। Real ad-supported WrestleWire publication के production launch के लिए Cloudflare Pages या अन्य commercial-use-appropriate hosting चुनें और terms verify करें। GitHub repository code रखने के लिए जारी रह सकती है।
