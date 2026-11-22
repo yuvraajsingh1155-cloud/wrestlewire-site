@@ -124,6 +124,19 @@ a.radar-card{display:flex;flex-direction:column;color:inherit;text-decoration:no
 a.radar-card:focus-visible{outline:3px solid #ffb6c1;outline-offset:3px}
 a.radar-card:hover{border-color:var(--red);transform:translateY(-2px)}
 a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weight:900;letter-spacing:.05em;text-decoration:underline;text-underline-offset:3px}
+
+.auto-updates{background:#141317;border:1px solid #64313e;border-top:3px solid #ed243a;border-radius:12px;padding:25px;margin:37px 0}
+.auto-updates h2{font:1000 clamp(30px,5vw,48px)/1 Impact,Arial,sans-serif;letter-spacing:-.03em;margin:9px 0}
+.auto-updates h2 span{color:#ef2841}
+.auto-updates-intro{max-width:820px;font-size:13px;color:#d6c7ce}
+.auto-updates-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.auto-brief-card{display:flex;flex-direction:column;gap:8px;min-height:140px;padding:17px;background:#221a20;border:1px solid #69404c;border-radius:8px;text-decoration:none;color:#fff7f6;transition:transform .2s,border-color .2s}
+.auto-brief-card:hover{border-color:#ed2842;transform:translateY(-3px)}
+.auto-brief-tag{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:#ffa1ad;font-weight:900}
+.auto-brief-card strong{font-size:15px;line-height:1.4}
+.auto-brief-open{font-size:11px;text-decoration:underline;text-underline-offset:3px;color:#ff94a5;font-weight:900;margin-top:auto}
+@media(max-width:950px){.auto-updates-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:590px){.auto-updates-grid{grid-template-columns:1fr}.auto-updates{padding:17px}}
 </style>
 </head>
 <body>
@@ -216,6 +229,15 @@ a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weigh
 </div><div id="rosterEmpty" class="empty">No wrestler matches this filter.</div>
   <p class="roster-guide">Roster affiliations and career status can change. Profiles summarize established career associations and notable opponents, not exhaustive match-by-match records. No private salary estimates are presented as facts.</p>
 </section>
+<section class="auto-updates" id="latest-source-briefs" aria-labelledby="auto-updates-heading">
+ <div class="eyebrow">✦ FRESH FROM OFFICIAL CHANNELS · FREE AUTOMATION</div>
+ <h2 id="auto-updates-heading">LATEST <span>SOURCE BRIEFS.</span></h2>
+ <p class="auto-updates-intro">Newly detected official WWE and AEW videos receive short, attributed source pages automatically. These are publisher upload notices, not independently verified match reports or AI-written journalism.</p>
+ <div class="auto-updates-grid">
+ <!-- WRESTLEWIRE_AUTO_BRIEFS_START -->
+ <p class="radar-empty">Verified WWE / AEW source briefs appear after the next scheduled refresh.</p>
+ <!-- WRESTLEWIRE_AUTO_BRIEFS_END -->
+ </div></section>
 <!-- WRESTLEWIRE_SOURCE_RADAR_START -->
 <section class="auto-radar" id="official-sources" aria-labelledby="radar-heading"><div class="eyebrow">✦ DIRECT FROM THE PROMOTIONS</div><h2 id="radar-heading">OFFICIAL <span>SOURCE RADAR.</span></h2><p class="radar-intro">Automatically updated links from WWE and AEW official video feeds. Links and video titles are attributed to their publishers; they are not original WrestleWire reporting.</p><div class="radar-grid"><a class="radar-card" href="https://www.youtube.com/watch?v=D23xyX9ldFM" target="_blank" rel="noopener noreferrer nofollow" aria-label="Open official WWE source: Director’s Cut of the 2023 Men’s WarGames Match: Survivor Series"><div class="radar-meta"><span>WWE OFFICIAL VIDEO</span> <time datetime="2026-11-22">2026-11-22</time></div><h3>Director’s Cut of the 2023 Men’s WarGames Match: Survivor Series</h3><p>New upload listed by the promotion’s official YouTube channel. This is a source link, not an independently verified news article.</p><span class="radar-open">WATCH OFFICIAL SOURCE ↗</span></a>
 <a class="radar-card" href="https://www.youtube.com/watch?v=HEWm8UOcNkc" target="_blank" rel="noopener noreferrer nofollow" aria-label="Open official WWE source: We still ❤️Hacksaw"><div class="radar-meta"><span>WWE OFFICIAL VIDEO</span> <time datetime="2026-11-22">2026-11-22</time></div><h3>We still ❤️Hacksaw</h3><p>New upload listed by the promotion’s official YouTube channel. This is a source link, not an independently verified news article.</p><span class="radar-open">WATCH OFFICIAL SOURCE ↗</span></a>
