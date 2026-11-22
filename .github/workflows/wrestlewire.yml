@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/source_radar.py'
       - 'scripts/publish_briefs.py'
+      - 'scripts/ai_drafts.py'
       - 'tests/test_source_radar.py'
       - 'tests/test_publish_briefs.py'
       - '.github/workflows/wrestlewire.yml'
@@ -65,3 +66,18 @@ jobs:
           done
           echo "Source refresh could not be pushed without conflicts."
           exit 1
+
+      - name: Optional free-tier Gemini review draft
+        if: ${{ vars.ENABLE_FREE_AI_DRAFTS == 'true' }}
+        env:
+          ENABLE_FREE_AI_DRAFTS: 'true'
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/ai_drafts.py
+      - name: Preserve unpublished AI draft for editorial review
+        if: ${{ vars.ENABLE_FREE_AI_DRAFTS == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: wrestlewire-review-draft
+          path: review_drafts/*.md
+          if-no-files-found: ignore
+          retention-days: 7
