@@ -6,6 +6,11 @@
 <meta name="theme-color" content="#101013">
 <meta name="description" content="WrestleWire — a bold, independent WWE and AEW wrestling news concept covering the action, storylines, attendance and wrestling business.">
 <title>WrestleWire | Beyond the Bell</title>
+<link rel="canonical" href="https://wrestlewire-site.yuvraajsingh1155.workers.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WrestleWire | Beyond the Bell">
+<meta property="og:description" content="WWE, AEW and independent wrestling explainers. Follow official WWE and AEW source links.">
+<meta property="og:url" content="https://wrestlewire-site.yuvraajsingh1155.workers.dev/">
 <style>
 :root{--ink:#fffaf8;--muted:#b7b5b8;--coal:#101013;--card:#1b1b20;--line:#3b343a;--red:#ed243a;--deep:#a20d27;--cream:#f6f0e9;--yellow:#f9c342}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--coal);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}a{color:inherit;text-decoration:none}.wrap{max-width:1240px;margin:auto;padding:0 25px}
@@ -27,6 +32,23 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
 @media(max-width:700px){.wrap{padding-left:15px;padding-right:15px}.topline{font-size:8px}.nav-inner{min-height:66px}.logo{font-size:25px}.brand-mask{height:37px;width:35px}.navlinks{display:none}.launch{font-size:9px}.hero-grid{grid-template-columns:1fr;min-height:unset}.hero-art{grid-row:1;height:265px;width:100%;overflow:hidden}.hero-art svg{right:-22px;width:100%;height:340px;bottom:-70px}.hero-content{padding:12px 3px 55px}.hero h1{font-size:65px;line-height:.85;margin:12px 0 15px}.hero p{font-size:13px}.hero-motif{bottom:15px}.metrics{grid-template-columns:1fr 1fr}.section-title{margin:36px 0 18px}.news-layout{grid-template-columns:1fr}.aside{display:grid;grid-template-columns:1fr 1fr}.aside .fakead{display:none}.card-art{height:150px}.promo{grid-template-columns:1fr 100px}.promo svg{height:130px;width:105px}.promo h2{font-size:28px}}
 @media(max-width:470px){.cardgrid{grid-template-columns:1fr}.card-art{height:178px}.aside{grid-template-columns:1fr}.hero h1{font-size:57px}.promo{grid-template-columns:1fr}.promo svg{display:none}.section-title .note{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card:hover{transform:none}}
+
+/* Safe, source-linked WWE/AEW auto radar */
+.auto-radar{margin:55px 0 12px;padding:28px;background:#161216;border:1px solid #64303b;border-top:4px solid var(--red)}
+.auto-radar h2{font:1000 clamp(30px,5vw,49px)/1 Impact,"Arial Narrow",sans-serif;letter-spacing:-.01em;margin:10px 0;text-transform:uppercase}
+.auto-radar h2 span{color:var(--red)}
+.radar-intro,.radar-disclaimer{color:var(--muted);font-size:12px;line-height:1.75;max-width:800px}
+.radar-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:21px}
+.radar-card{background:#211d22;border:1px solid #48343d;padding:18px;min-width:0}
+.radar-card:hover{border-color:var(--red)}
+.radar-meta{display:flex;justify-content:space-between;gap:7px;align-items:center;font-size:10px;color:#b4a2ab}
+.radar-meta span{color:#ff6c81;font-weight:900;letter-spacing:.08em}
+.radar-card h3{font-size:16px;line-height:1.3;margin:12px 0}
+.radar-card p{font-size:11px;line-height:1.7;color:var(--muted)}
+.radar-card a{color:#ff7386;font-size:11px;font-weight:900;text-decoration:underline;text-underline-offset:3px}
+.radar-empty{color:#cbbac0;font-size:13px;grid-column:1/-1}
+@media(max-width:800px){.radar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:510px){.radar-grid{grid-template-columns:1fr}.auto-radar{padding:19px}}
 </style>
 </head>
 <body>
@@ -101,6 +123,15 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
     <div class="fakead">FUTURE AD PLACEMENT<br>Not monetized yet</div>
   </aside></div>
 </section>
+<!-- WRESTLEWIRE_SOURCE_RADAR_START -->
+<section class="auto-radar" id="official-sources" aria-labelledby="radar-heading">
+<div class="eyebrow">✦ DIRECT FROM THE PROMOTIONS</div>
+<h2 id="radar-heading">OFFICIAL <span>SOURCE RADAR.</span></h2>
+<p class="radar-intro">Automatically updated links from official WWE and AEW feeds. Source titles and links are attributed to their publishers — not original WrestleWire reporting.</p>
+<div class="radar-grid"><p class="radar-empty">Official source monitor is being initialized. Check back after its first successful scheduled refresh.</p></div>
+<p class="radar-disclaimer">The source feed is best-effort and not a substitute for independent verification.</p>
+</section>
+<!-- WRESTLEWIRE_SOURCE_RADAR_END -->
 <section class="promo"><div class="promo-copy"><div class="eyebrow">Our design language</div><h2>MASKS. MOMENTS. MAIN EVENTS.</h2><p>An original luchador-inspired visual identity, without copying WWE or AEW logos, wrestling photos, or performers' likenesses. Automated reporting will be added only after sources and publishing safety checks are configured.</p></div><svg viewBox="0 0 150 170" aria-hidden="true"><use href="#maskIcon"/></svg></section>
 </main>
 <footer class="footer"><div class="wrap"><div><div class="logo" style="font-size:24px">WRESTLE<b>WIRE</b></div><p class="small">Independent wrestling news concept. Not affiliated with WWE, AEW or their talent. No automatic reporting, adverts or paid subscriptions are enabled in this demonstration.</p></div><div class="footerlinks"><a href="#latest">News</a><a href="https://www.wwe.com/" target="_blank" rel="noopener noreferrer">WWE Official</a><a href="https://www.allelitewrestling.com/" target="_blank" rel="noopener noreferrer">AEW Official</a></div></div></footer>
