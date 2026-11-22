@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wrestlewire-site.yuvraajsingh1155.workers.dev/sitemap.xml
