@@ -40,10 +40,23 @@ jobs:
         run: |
           git config user.name "wrestlewire-newsroom[bot]"
           git config user.email "wrestlewire-newsroom[bot]@users.noreply.github.com"
-          git add index.html data/source_radar.json
-          if git diff --cached --quiet; then
-            echo "No new source links; nothing to publish."
-            exit 0
-          fi
-          git commit -m "newsroom: refresh verified WWE/AEW source links [skip ci]"
-          git push origin HEAD:main
+          # On a busy repository another push can arrive while the feed updates.
+          # Always regenerate on the latest main branch rather than overwriting changes.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/source_radar.py
+            git add index.html data/source_radar.json
+            if git diff --cached --quiet; then
+              echo "No fresh official sources to publish."
+              exit 0
+            fi
+            git commit -m "newsroom: refresh verified WWE/AEW source links [skip ci]"
+            if git push origin HEAD:main; then
+              echo "Source links updated safely on main."
+              exit 0
+            fi
+            echo "Concurrent GitHub update detected; retrying with latest main."
+          done
+          echo "Source refresh could not be pushed without conflicts."
+          exit 1
