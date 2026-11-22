@@ -40,7 +40,7 @@ def extract_feed(xml: bytes, promotion: str, channel_id: str) -> list[dict]:
         raise ValueError("Unexpected feed format")
     source_id = root.findtext(YT + "channelId")
     if source_id and source_id != channel_id:
-        raise ValueError("Channel mismatch")
+        raise ValueError(f"Channel mismatch: requested={channel_id}, returned={source_id}")
     items = []
     for entry in root.findall(ATOM + "entry"):
         item_channel = entry.findtext(YT + "channelId")
