@@ -30,7 +30,7 @@ class FreeGeminiDraftTests(unittest.TestCase):
         self.assertEqual(ai_drafts.MAX_DRAFTS_PER_DAY, 1)
 
     def test_source_prompt_requires_review(self):
-        self.assertIn("DO NOT invent", ai_drafts.PROMPT)
+        self.assertIn("Do NOT invent", ai_drafts.PROMPT)
         self.assertIn("manually fact-checked", ai_drafts.PROMPT)
 
 
