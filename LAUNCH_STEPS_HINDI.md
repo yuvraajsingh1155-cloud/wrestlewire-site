@@ -1,67 +1,35 @@
-# WrestleWire — आपका Step-by-Step Launch Checklist
+# WrestleWire — Current Progress (22 Nov 2026)
 
-## अभी क्या हो चुका है (22 November 2026)
-- GitHub repository connected: `yuvraajsingh1155-cloud/wrestlewire-site`
-- `index.html` में red-black-white wrestling theme, original luchador mask art, illustrated high-flying action, WWE/AEW/business/analysis sections, search, filters और sample stories uploaded हैं।
-- `.github/workflows/pages.yml` static site deploy करने के लिए तैयार है।
-- `.github/workflows/wrestlewire.yml` केवल guarded newsroom scaffold है; यह अभी पूरे article pipeline के रूप में काम नहीं कर रहा।
-- Website URL live और public deployment की पुष्टि नहीं हुई है।
-- Artificial wrestler salaries, injuries या financial figures publish नहीं किए गए।
+## ✅ Completed in GitHub
+- Repository connected and publicly accessible.
+- Red/black/white wrestling design, lucha illustration, WWE/AEW category filters and article demo UI.
+- Cloudflare Worker production URL provided and earlier screenshots showed the website loads in owner's browser:
+  https://wrestlewire-site.yuvraajsingh1155.workers.dev/
+- The Source Radar importer, channel ID checks, source attribution and safe caching have been committed.
+- GitHub Actions scheduled updater (every 3 hours) has been committed; first successful job remains **unverified**.
+- Privacy, About, editorial/corrections information added to homepage.
+- Canonical metadata, robots.txt and sitemap.xml committed. Whether robots/sitemap are actually served by Worker must be checked.
 
-## अब आपको एक-एक करके क्या करना है
+## ⚠️ Not confirmed
+- Latest Cloudflare deployment contains all new GitHub changes.
+- GitHub Actions workflows ran and passed tests.
+- Official feeds were accessible from the GitHub runner.
 
-### STEP 1 — Recommended: Cloudflare Pages पर वेबसाइट LIVE करें (अभी जरूरी)
-GitHub Pages केवल learning/preview के लिए रखें। News business / ads site के लिए Cloudflare Pages जैसे उपयुक्त commercial hosting का उपयोग करें और current terms verify करें।
-1. https://dash.cloudflare.com/ पर जाएँ और अपना Cloudflare account sign in या create करें।
-2. Workers & Pages → Create application → Pages → Import an existing Git repository.
-3. GitHub से authorize करके `yuvraajsingh1155-cloud/wrestlewire-site` चुनें।
-4. Project name जैसे `wrestlewire-news`, production branch `main`, framework preset `None` रखें।
-5. Build command: `mkdir -p public && cp index.html public/index.html`
-6. Build output directory: `public`
-7. Save and Deploy. Successful होने पर Cloudflare आपको असली `*.pages.dev` URL देगा; URL पहले से अनुमान लगाकर इस्तेमाल न करें।
-8. उस URL को ChatGPT में शेयर करें ताकि live site जांची जा सके।
-Official docs: https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
+## ❌ Not yet done
+- Fully automated **AI-written** and multi-source fact-checked articles.
+- Paid AI API account/key and authorized budget. A ChatGPT subscription alone is not API billing.
+- Reliable news licensing/press-source strategy and sensitive-topic review.
+- Google Search Console + analytics linked to this publication.
+- Original long-form journalism at monetization quality.
+- AdSense approval and earnings; domain/trademark check if buying custom domain.
 
-### Optional — GitHub Pages केवल demo preview
-यदि GitHub Pages पर भी demo चाहिए, तो repository Settings → Pages → Source: GitHub Actions चुनकर `Publish WrestleWire to GitHub Pages` workflow चला सकते हैं। इसे monetized business hosting न मानें।
+## Next technical check without sharing secrets
+Open https://github.com/yuvraajsingh1155-cloud/wrestlewire-site/actions
+The workflow is "Update WrestleWire Official Source Radar". If green, the source collector passed. A successful code commit does **not** alone confirm an Actions run.
 
-### STEP 2 — Design approval
-- Live site खोलकर desktop और mobile view देखें।
-- Logo, lucha art, colours और homepage sections में edits हों तो ChatGPT को बताएं; code में edit किया जा सकता है।
-
-### STEP 3 — Domain (optional, बाद में)
-- पहले नया brand name और trademark conflicts जाँचें।
-- चाहें तो domain खरीदें, जैसे अपना `.com` या `.in` विकल्प। किसी domain की availability अभी verified नहीं है।
-- GitHub Pages settings में custom domain + DNS configure करें। शुरुआती free subdomain पर domain खरीदना जरूरी नहीं है।
-
-### STEP 4 — Business identity and compliance (launch से पहले)
-- Website owner/publication नाम, संपर्क email, About, Contact, Privacy Policy, Editorial Policy, Corrections Policy तैयार करें।
-- अपनी actual data collection (analytics, newsletter, ads), cookie consent और applicable privacy law के अनुसार policy प्रकाशित करें; generic template के झूठे claims publish न करें।
-- Copyrighted wrestler photos, promotions के logos या videos बिना अनुमति reproduce न करें; licensed/authorized images या original artwork ही प्रयोग करें।
-
-### STEP 5 — Automated publishing (अलग technical phase)
-- Verified news feeds और उनके terms of use तय करें (WWE/AEW official announcements and appropriately licensed sources)।
-- Paid AI model चुनें और API budget cap बनाएं। ChatGPT subscription API calls को cover नहीं करता।
-- API secret केवल `Settings > Secrets and variables > Actions` में सुरक्षित डालें; chat में secret paste न करें।
-- Full newsroom scripts, tests, source checks और build integration जोड़ने के बाद workflow enable करें।
-- शुरुआत में human review mode; injury, contract, salary और sensitive rumors को कभी auto-publish न करें।
-
-### STEP 6 — Monetization (अच्छे original content के बाद)
-- Google Search Console में site verify करें, sitemap submit करें और indexing देखें।
-- Analytics install करें (privacy disclosures/consent जहाँ लागू हों)।
-- Original reporting, proper citations, compelling explainers और regular quality review करें।
-- उसके बाद Google AdSense application करें; approval, traffic, revenue या timeline की कोई guarantee नहीं।
-- Affiliate offers/sponsorships पर आवश्यक disclosure करें।
-
-## ज़रूरी links
-- Repository: https://github.com/yuvraajsingh1155-cloud/wrestlewire-site
-- Pages: https://github.com/yuvraajsingh1155-cloud/wrestlewire-site/settings/pages
-- Actions: https://github.com/yuvraajsingh1155-cloud/wrestlewire-site/actions
-- Expected site: https://yuvraajsingh1155-cloud.github.io/wrestlewire-site/
-- Google Search Console: https://search.google.com/search-console/about
-- Google AdSense: https://adsense.google.com/
-
-**Next action:** सबसे पहले STEP 1 पूरा करें। फिर website working URL या GitHub run status से deployment validate किया जा सकेगा।
-
-## Important hosting note (business use)
-GitHub Pages को केवल prototype/preview के लिए इस्तेमाल करें। GitHub Pages की official limits policy इसे free hosting के रूप में online business चलाने के लिए intended/allowed नहीं मानती। Real ad-supported WrestleWire publication के production launch के लिए Cloudflare Pages या अन्य commercial-use-appropriate hosting चुनें और terms verify करें। GitHub repository code रखने के लिए जारी रह सकती है।
+## Operational safeguards
+- No invented facts or unsupported rumors.
+- Failed feeds do not wipe the last cached official links.
+- No third-party private images copied to the site.
+- GitHub may delay or automatically disable schedules due to inactivity.
+- Publishing changes to the live Workers site depends on Cloudflare's Git-based auto-deploy configuration.
