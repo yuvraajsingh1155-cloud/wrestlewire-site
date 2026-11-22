@@ -18,3 +18,5 @@ The separate workflow `.github/workflows/wrestlewire.yml` is an **inactive guard
 For the next production phase, upload the source package and verify tests, configure approved editorial feeds and an OpenAI API secret, enable scheduled refresh, and connect a domain and analytics. Start with human review for sensitive stories. GitHub Actions scheduling is best-effort.
 
 **Safety:** Never commit API secrets. The site is not affiliated with WWE or AEW. Do not publish unsupported medical or salary claims. Copyrighted photos must be appropriately licensed.
+
+> **Commercial hosting note:** GitHub Pages is for our design preview only. For an advertising-supported wrestling news business, deploy to a hosting platform whose terms allow the intended commercial use, such as a suitable Cloudflare Pages plan; confirm current terms before launch.
