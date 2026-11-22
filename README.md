@@ -40,3 +40,6 @@
 3. Add substantive, source-backed original journalism and maintain corrections and privacy disclosures.
 4. Check live sitemap, analytics/privacy compliance and Search Console.
 5. Apply for ad monetization only after sufficient original content, eligibility and editorial standards are in place.
+
+## Cloudflare automatic deploy (verified in Dashboard)
+The Cloudflare Workers build setting **Disable builds** was switched OFF on 22 Nov 2026. Its connected production branch is `main`, and the deploy command is `npx wrangler deploy`. Any new commit on `main` should trigger a build; confirm the run outcome in Cloudflare Deployments before claiming an updated production site.
