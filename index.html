@@ -49,6 +49,17 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
 .radar-empty{color:#cbbac0;font-size:13px;grid-column:1/-1}
 @media(max-width:800px){.radar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:510px){.radar-grid{grid-template-columns:1fr}.auto-radar{padding:19px}}
+
+/* Publication disclosures and policies */
+.policy-panel{border-top:3px solid var(--red);border-bottom:1px solid #5a343e;margin:36px 0 55px;padding:25px 3px;background:#121115}
+.policy-panel h2{font:1000 31px Impact,"Arial Narrow",sans-serif;margin:8px 0 20px;text-transform:uppercase}
+.policy-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.policy-columns section{padding:18px;background:#201b20;border:1px solid #48363d}
+.policy-columns h3{font-size:14px;text-transform:uppercase;color:#ff8a98;letter-spacing:.07em;margin:0 0 9px}
+.policy-columns p,.policy-columns li{font-size:12px;color:#d4c9ce;line-height:1.7}
+.policy-columns ul{padding-left:17px}
+.policy-columns a{color:#ff8999;font-weight:900;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.policy-columns{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -134,7 +145,15 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
 <!-- WRESTLEWIRE_SOURCE_RADAR_END -->
 <section class="promo"><div class="promo-copy"><div class="eyebrow">Our design language</div><h2>MASKS. MOMENTS. MAIN EVENTS.</h2><p>An original luchador-inspired visual identity, without copying WWE or AEW logos, wrestling photos, or performers' likenesses. Automated reporting will be added only after sources and publishing safety checks are configured.</p></div><svg viewBox="0 0 150 170" aria-hidden="true"><use href="#maskIcon"/></svg></section>
 </main>
-<footer class="footer"><div class="wrap"><div><div class="logo" style="font-size:24px">WRESTLE<b>WIRE</b></div><p class="small">Independent wrestling news concept. Not affiliated with WWE, AEW or their talent. No automatic reporting, adverts or paid subscriptions are enabled in this demonstration.</p></div><div class="footerlinks"><a href="#latest">News</a><a href="https://www.wwe.com/" target="_blank" rel="noopener noreferrer">WWE Official</a><a href="https://www.allelitewrestling.com/" target="_blank" rel="noopener noreferrer">AEW Official</a></div></div></footer>
+<section id="publication-policies" class="policy-panel" aria-label="WrestleWire publication information">
+<div class="eyebrow">INDEPENDENT · SOURCE-FIRST · TRANSPARENT</div>
+<h2>ABOUT THE NEWSROOM</h2>
+<div class="policy-columns">
+<section><h3>Who we are</h3><p>WrestleWire is an independent, pre-launch wrestling publication project focused on WWE, AEW, wrestling culture and the business of professional wrestling. We are not affiliated with any promotion or performer. Current feature articles are labeled editorial demos.</p><p>Official Source Radar shows attributed video titles and links, not original reporting.</p></section>
+<section><h3>Editorial & corrections</h3><p>We separate official announcements, independently corroborated reports, opinion and unverified speculation. We do not invent injuries, private salaries, attendance or company revenue figures.</p><p>If an error is spotted, provide the article title, disputed statement and source evidence via <a href="https://github.com/yuvraajsingh1155-cloud/wrestlewire-site/issues" target="_blank" rel="noopener noreferrer">the project’s issue tracker</a>. Submissions may be public. Corrections will be attributed or noted where appropriate.</p></section>
+<section><h3>Privacy & contact</h3><p>The current demonstration has no user account, payment form, newsletter signup or site-run advertising script. Hosting and linked external services may independently process visitor information under their own policies.</p><p>Do not post private personal information in public GitHub issues. Before analytics, newsletter or ads are introduced, this notice must be updated to reflect those services and applicable consent requirements.</p><p><a href="https://github.com/yuvraajsingh1155-cloud/wrestlewire-site" target="_blank" rel="noopener noreferrer">Project and contact information ↗</a></p></section>
+</div></section>
+<footer class="footer"><div class="wrap"><div><div class="logo" style="font-size:24px">WRESTLE<b>WIRE</b></div><p class="small">Independent wrestling news concept. Not affiliated with WWE, AEW or their talent. No automatic reporting, adverts or paid subscriptions are enabled in this demonstration.</p></div><div class="footerlinks"><a href="#publication-policies">About · Privacy · Corrections</a><a href="#latest">News</a><a href="https://www.wwe.com/" target="_blank" rel="noopener noreferrer">WWE Official</a><a href="https://www.allelitewrestling.com/" target="_blank" rel="noopener noreferrer">AEW Official</a></div></div></footer>
 <dialog id="reader" aria-labelledby="storyTitle"><button class="close" id="close">← RETURN TO THE NEWSROOM</button><div id="article"></div></dialog>
 <script>
 (function(){
