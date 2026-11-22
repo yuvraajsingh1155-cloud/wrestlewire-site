@@ -1,79 +1,43 @@
-name: WrestleWire Newsroom & Site Builder
+name: Update WrestleWire Official Source Radar
+
 on:
-  push:
-    branches: [main]
   schedule:
-    - cron: '17 */3 * * *'
+    # Every three hours; GitHub scheduling is best effort and may be delayed.
+    - cron: "23 */3 * * *"
   workflow_dispatch:
+
 permissions:
   contents: write
+
 concurrency:
-  group: wrestlewire-newsroom
+  group: wrestlewire-official-radar
   cancel-in-progress: false
+
 jobs:
-  build:
+  refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 12
     steps:
-      - name: Checkout repository
+      - name: Checkout website
         uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Setup Python
+      - name: Use Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - name: Unpack initial source bundle once
-        run: |
-          if [ -f pack/wrestlewire.br.b64 ]; then
-            python -m pip install --quiet brotli
-            python - <<'PY'
-          import base64, io, tarfile, brotli
-          from pathlib import Path
-          source = Path("pack/wrestlewire.br.b64")
-          blob = brotli.decompress(base64.b64decode(source.read_text()))
-          with tarfile.open(fileobj=io.BytesIO(blob)) as archive:
-              for item in archive:
-                  name = Path(item.name)
-                  if not item.isfile() or name.is_absolute() or ".." in name.parts:
-                      raise ValueError("Invalid bundled path")
-                  target = Path.cwd().joinpath(name)
-                  target.parent.mkdir(parents=True, exist_ok=True)
-                  with archive.extractfile(item) as source_stream, target.open("wb") as output:
-                      output.write(source_stream.read())
-          source.unlink()
-          PY
-          fi
-      - name: Stop safely if source is not uploaded
-        id: source_check
-        run: |
-          if [ -f scripts/build.py ]; then echo "ready=true" >> "$GITHUB_OUTPUT"; else echo "ready=false" >> "$GITHUB_OUTPUT"; fi
-      - name: Install required packages
-        if: steps.source_check.outputs.ready == 'true'
-        run: pip install -r requirements.txt
-      - name: Run safety tests
-        if: steps.source_check.outputs.ready == 'true'
+          python-version: "3.12"
+      - name: Verify official-feed security checks
         run: python -m unittest discover -s tests -v
-      - name: Update official source radar
-        if: steps.source_check.outputs.ready == 'true'
-        run: python scripts/radar.py
-      - name: Ingest article feeds only when explicitly configured
-        if: steps.source_check.outputs.ready == 'true'
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
-          ENABLE_AUTO_PUBLISH: ${{ vars.ENABLE_AUTO_PUBLISH || 'false' }}
-        run: python scripts/ingest.py
-      - name: Build static website
-        if: steps.source_check.outputs.ready == 'true'
-        run: python scripts/build.py
-      - name: Commit site updates when changed
-        if: steps.source_check.outputs.ready == 'true'
+      - name: Fetch latest official WWE and AEW videos
+        run: python scripts/source_radar.py
+      - name: Commit verified official-source updates
         run: |
           git config user.name "wrestlewire-newsroom[bot]"
           git config user.email "wrestlewire-newsroom[bot]@users.noreply.github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "build: update WrestleWire website and source radar"
-            git push origin main
+          git add index.html data/source_radar.json
+          if git diff --cached --quiet; then
+            echo "No new source links; nothing to publish."
+            exit 0
           fi
+          git commit -m "newsroom: refresh verified WWE/AEW source links [skip ci]"
+          git push origin HEAD:main
