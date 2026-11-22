@@ -1,6 +1,12 @@
 name: Update WrestleWire Official Source Radar
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/source_radar.py'
+      - 'tests/test_source_radar.py'
+      - '.github/workflows/wrestlewire.yml'
   schedule:
     # Every three hours; GitHub scheduling is best effort and may be delayed.
     - cron: "23 */3 * * *"
