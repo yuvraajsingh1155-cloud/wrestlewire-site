@@ -1,45 +1,51 @@
-# WrestleWire — Independent Wrestling Newsroom
+# WrestleWire — Free-First Wrestling Newsroom
 
-## Current project (22 November 2026)
+Production: https://wrestlewire-site.yuvraajsingh1155.workers.dev/
+GitHub: https://github.com/yuvraajsingh1155-cloud/wrestlewire-site
 
-- **Cloudflare Worker URL supplied and opened in the owner's browser:** https://wrestlewire-site.yuvraajsingh1155.workers.dev/
-- **GitHub source:** https://github.com/yuvraajsingh1155-cloud/wrestlewire-site
-- **Visual identity:** original red/black/white lucha-inspired wrestling design.
-- **Site:** functional static homepage with category filters, search, linked sample article dialogs, illustrated wrestler artwork.
-- **Policy:** transparent About/Contact/Editorial/Privacy disclosures built into the homepage.
-- **Official Source Radar:** reads WWE + AEW official YouTube Atom feeds, validates their channel IDs and video URLs, and inserts attributed headlines with canonical official-video links.
-- **Scheduled workflow:** .github/workflows/wrestlewire.yml runs every 3 hours (best-effort) and on relevant code changes, tests safety, then commits updates only when sources actually change.
-- **SEO groundwork:** canonical and social metadata, robots.txt, sitemap.xml. Check that Cloudflare Worker static asset configuration publishes those additional files.
+## Verified status, 22 November 2026
 
-### Important distinctions
+- Live Cloudflare Workers site, with GitHub main automatic deployments enabled and tested
+- Original red/black design, licensed action photography, article cards entirely clickable
+- Eight standalone editorial articles and 16 linked wrestler career profiles
+- Official WWE/AEW YouTube source radar, every 3 hours (best effort)
+- Automated official source **metadata briefs**: at most 2 per UTC day, noindex
+- Google Search Console: URL-prefix ownership **verified** with HTML meta tag
+- Google XML sitemap: **submitted**, status Success; initially 25 discovered pages
+- Public sitemap now includes 29 substantial article, profile, and policy pages
+- Cloudflare Web Analytics: **free website registered and JS beacon added to all page types**
+- Google Analytics 4: NOT active; Google legal terms must be accepted by the owner
+- Google AdSense: NOT active; the Google account has no existing AdSense publisher account
+- Optional free-tier Gemini drafting pipeline: implemented but disabled pending safely stored key and free-tier confirmation
 
-**Not live AI article automation:** Source Radar publishes attributed source *links*, not independent news reporting. AI-written articles, comprehensive verification, advertiser approval, custom domain, account-based analytics and income are **not enabled**. Do not advertise the site as an AI news publisher until the future vetted article system is implemented.
+## What gets auto-published for free
 
-**Deployment sync:** Cloudflare Workers Builds automatically deploys changes on GitHub push *only if* the Worker is configured with repository integration/auto-build. Repository commits alone do not prove a successful Workers deployment.
+The scheduled GitHub workflow checks official WWE and AEW video feeds, validates channel IDs, video IDs, timestamps and original video links, and updates the website's Official Source Radar. It creates up to TWO short source metadata pages per UTC day in the /news/ directory, labelled as publisher updates, not original reporting. These pages do not claim results, wrestler injuries, salary numbers or contract facts, and are marked noindex to avoid scaled-content spam. Source links are attributed.
 
-**Schedule caveat:** GitHub may delay scheduled runs and may disable scheduled workflows for inactive public repositories. If the first run fails, inspect GitHub Actions (the runner's internet access, repository Actions write permissions, and official source availability).
+This is NOT unrestricted AI article writing. Real AI-written drafts need a verified free/unbilled AI Studio project, secret GEMINI_API_KEY stored as a GitHub Actions repository secret and variable ENABLE_FREE_AI_DRAFTS=true. The optional scripts/ai_drafts.py limits drafts to one per UTC day. Outputs are temporary GitHub Actions artifacts requiring editorial fact-checking; they are NOT automatically published to the live site. The key is never committed to the repository. No new paid service has been activated.
 
-## Repository files
-- index.html — design, demo articles, official Source Radar slot, policy sections
-- scripts/source_radar.py — Python 3 standard library verified-channel feed importer
-- tests/test_source_radar.py — 9 offline safety tests
-- data/source_radar.json — safe official feed cache
-- .github/workflows/wrestlewire.yml — source refresh and GitHub publish
-- .github/workflows/pages.yml — optional GitHub Pages demo, not suggested for a monetized production publication
-- robots.txt and sitemap.xml — additional SEO artifacts
+GitHub Models was retired July 30, 2026 and is not available as a free API substitute.
 
-### Safety and licensing
-- WWE and AEW are unrelated third parties. WrestleWire is not affiliated with either promotion.
-- Official YouTube video titles and canonical source links are attributed, with no copied full video transcript or claimed licensed photography.
-- Never invent injuries, salaries, private contracts, profit or attendance. Separate opinions from confirmed reporting.
-- Do not add secret API tokens to repository files. If a paid AI API is ever activated, store its token in platform secrets and set a spending cap.
+## Site content and policies
 
-### Remaining work
-1. Verify Cloudflare auto-deploy and scheduled Actions logs (read from dashboard if available).
-2. Build reliable multi-source editorial research, fact checking and AI article drafting/publishing, and configure API credentials and a budget with the owner.
-3. Add substantive, source-backed original journalism and maintain corrections and privacy disclosures.
-4. Check live sitemap, analytics/privacy compliance and Search Console.
-5. Apply for ad monetization only after sufficient original content, eligibility and editorial standards are in place.
+The website currently has 8 explanatory articles; 16 profile starters covering WWE, AEW and legends; accessible source links; category search and filters. It is not a complete world wrestler database or a full match-by-match results archive. Private incomes are not invented. Real action photos have image credits.
 
-## Cloudflare automatic deploy (verified in Dashboard)
-The Cloudflare Workers build setting **Disable builds** was switched OFF on 22 Nov 2026. Its connected production branch is `main`, and the deploy command is `npx wrangler deploy`. Any new commit on `main` should trigger a build; confirm the run outcome in Cloudflare Deployments before claiming an updated production site.
+Independent policy pages:
+- /about/
+- /privacy/
+- /editorial-policy/
+- /contact/
+
+## Monetization
+
+Google AdSense sign-up is free, but approval is not automatic and an AdSense publisher account must first be created and verified. Google may reject a platform hostname or a site with limited original content. No publisher ID, ads.txt declaration or ad code is installed. The exact workers.dev hostname eligibility is not confirmed. Do not purchase a custom domain or provide payment/tax data unless the owner chooses.
+
+Google Analytics 4 is free but the owner must personally accept Google's terms before a measurement ID exists. For now, cookie-free Cloudflare Web Analytics provides the no-cost traffic overview.
+
+## Risks & limits
+
+- No paid API, paid domain or card is required for the current site.
+- GitHub schedules are best-effort and can be delayed.
+- Google warns against scaled, low-value automated content; automated metadata pages are noindex by default.
+- WrestleWire is not affiliated with WWE, AEW or any performer, and does not reproduce full video transcripts.
+- Only verified, attributed claims should appear in reported articles.
