@@ -18,7 +18,7 @@ from publish_briefs import safe_video
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 FEED = ROOT / "data" / "source_radar.json"
-DRAFTS = ROOT / "drafts" / "pending"
+DRAFTS = ROOT / "review_drafts"
 MODEL = "gemini-2.5-flash-lite"
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta/models/"
 MAX_DRAFTS_PER_DAY = 1
@@ -108,6 +108,10 @@ def run():
     if source is None:
         print("No fresh verified source for drafting")
         return False
+    published_at = dt.datetime.fromisoformat(source["published"].replace("Z", "+00:00"))
+    if (dt.datetime.now(dt.timezone.utc) - published_at) > dt.timedelta(days=MAX_SOURCE_AGE_DAYS):
+        print("Official upload too old for AI draft; skip")
+        return False
     draft = generate(key, source)
     DRAFTS.mkdir(parents=True, exist_ok=True)
     target = DRAFTS / (today + "-" + source["video_id"] + ".md")
@@ -124,7 +128,7 @@ model: {MODEL}
 
 """
     target.write_text(header + draft + "\n", encoding="utf-8")
-    print("Wrote one private-key-generated, review-required public-repository draft (no API key printed)")
+    print("Created one review-required artifact draft (no API key printed or site publication)")
     return True
 
 
