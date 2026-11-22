@@ -5,7 +5,9 @@ on:
     branches: [main]
     paths:
       - 'scripts/source_radar.py'
+      - 'scripts/publish_briefs.py'
       - 'tests/test_source_radar.py'
+      - 'tests/test_publish_briefs.py'
       - '.github/workflows/wrestlewire.yml'
   schedule:
     # Every three hours; GitHub scheduling is best effort and may be delayed.
@@ -46,7 +48,10 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python scripts/source_radar.py
+            python scripts/publish_briefs.py
             git add index.html data/source_radar.json
+            # New posts are unindexed source briefs and never include unverified outcomes.
+            if [ -d news ]; then git add -A news; fi
             if git diff --cached --quiet; then
               echo "No fresh official sources to publish."
               exit 0
