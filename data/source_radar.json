@@ -2,6 +2,13 @@
   "entries": [
     {
       "promotion": "WWE",
+      "video_id": "D23xyX9ldFM",
+      "title": "Director’s Cut of the 2023 Men’s WarGames Match: Survivor Series",
+      "published": "2026-11-22T15:00:18Z",
+      "url": "https://www.youtube.com/watch?v=D23xyX9ldFM"
+    },
+    {
+      "promotion": "WWE",
       "video_id": "HEWm8UOcNkc",
       "title": "We still ❤️Hacksaw",
       "published": "2026-11-22T14:30:11Z",
@@ -90,13 +97,6 @@
       "title": "Daga, Angel & Berto vs. La Parka, El Grande & Rey Fenix | Title Match: Lucha Libre AAA highlights",
       "published": "2026-11-22T03:00:33Z",
       "url": "https://www.youtube.com/watch?v=9RsTFfj5jIw"
-    },
-    {
-      "promotion": "WWE",
-      "video_id": "2HaA2c3Kzro",
-      "title": "La Catalina saves Faby Apache from Las Tóxicas: Lucha Libre AAA highlights: Nov. 21, 2026",
-      "published": "2026-11-22T03:00:32Z",
-      "url": "https://www.youtube.com/watch?v=2HaA2c3Kzro"
     }
   ]
 }
