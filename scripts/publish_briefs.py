@@ -89,7 +89,7 @@ footer{{padding:30px;text-align:center;border-top:1px solid #45323a;color:#bfb2b
 <p>For a fuller report, we would cross-check the underlying broadcast, published match results and any relevant primary statements before making further claims.</p>
 <a class="button" href="{url}" target="_blank" rel="noopener noreferrer nofollow">WATCH ORIGINAL {name} SOURCE ↗</a>
 <p><a href="/#official-sources">← Back to the official source radar</a></p>
-</main><footer>Independent wrestling coverage. Not affiliated with WWE, AEW or any performer.</footer></body></html>"""
+</main><footer>Independent wrestling coverage. Not affiliated with WWE, AEW or any performer.</footer><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token":"07d17fc48e50449187f9739232103de4"}}'></script></body></html>"""
 
 
 def content_cards(items: list[dict]) -> str:
