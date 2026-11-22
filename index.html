@@ -60,6 +60,62 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
 .policy-columns ul{padding-left:17px}
 .policy-columns a{color:#ff8999;font-weight:900;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:700px){.policy-columns{grid-template-columns:1fr}}
+
+/* PHOTO-LED NEWSROOM REDESIGN - LICENSED WIKIMEDIA COMMONS MEDIA */
+.hero-grid{grid-template-columns:48% 52%;min-height:570px;gap:0}
+.hero-content{padding:80px 22px 65px 0}
+.hero h1{font-size:clamp(58px,8vw,112px)}
+.hero-photo{position:relative;align-self:stretch;height:auto;min-height:570px;overflow:hidden;background:#28141d}
+.hero-photo img{height:100%;width:100%;position:absolute;inset:0;object-fit:cover;object-position:center 40%;filter:contrast(1.12) saturate(.82)}
+.hero-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#180d15 0%,rgba(24,13,21,.15) 25%,transparent 55%),linear-gradient(0deg,#150b12 0%,transparent 35%);z-index:1}
+.hero-photo:after{content:"";position:absolute;inset:0;border:12px solid rgba(239,36,58,.08);z-index:1;pointer-events:none}
+.photo-tag{position:absolute;bottom:22px;right:18px;z-index:2;padding:9px 11px;background:#100e12c9;color:#fff1f2;border-left:3px solid var(--red);font-weight:800;font-size:10px;letter-spacing:.04em;max-width:315px}
+.photo-tag a,.credits a{color:#ff9bab;text-decoration:underline}
+.hero-sticker{display:none}
+.card{cursor:pointer;transition:transform .18s ease,border-color .18s ease;box-shadow:0 18px 30px rgba(0,0,0,.18)}
+.card:hover{transform:translateY(-4px);border-color:#dc3e56}
+.card-whole-link{display:flex;flex-direction:column;min-height:100%;height:100%;text-decoration:none;color:inherit}
+.card-whole-link:focus-visible{outline:3px solid #ffb9c3;outline-offset:-3px}
+.card-art{height:210px;overflow:hidden}
+.card-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,8,14,.56),transparent 64%);z-index:1}
+.card-art .badge{z-index:3}
+.card-art.photo-art{background:#21161d}
+.card-art img{display:block;position:absolute;inset:0;height:100%;width:100%;object-fit:cover;object-position:center 30%;filter:contrast(1.08) saturate(.92);transition:transform .2s ease}
+.card:hover .card-art img{transform:scale(1.04)}
+.cover-word{position:absolute;inset:auto 12px 8px;z-index:2;text-align:right;color:#f9f2eb;font:1000 clamp(35px,5vw,62px)/.9 Impact,Arial,sans-serif;letter-spacing:.02em;text-shadow:0 4px 12px #000b}
+.card-body{flex:1;padding:18px;gap:0}
+.card-foot{margin-top:auto}
+.card .read{display:inline-block}
+.free-label{font-size:10px;font-weight:900;letter-spacing:.1em;color:#b4aaaf}
+.section-anchor{scroll-margin-top:95px}
+.roster-feature{margin:55px 0 18px}
+.roster-feature h2{font:1000 clamp(37px,5vw,56px)/1 Impact,Arial,sans-serif;text-transform:uppercase;margin:7px 0 18px}
+.roster-feature h2 span{color:var(--red)}
+.roster-description{color:#d5c8ce;font-size:13px;max-width:720px}
+.roster-controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;margin:15px 0}
+.roster-controls input{min-width:250px;flex:1;padding:13px;border:1px solid #68414c;background:#221e24;color:white;border-radius:5px}
+.roster-controls select{padding:11px;border:1px solid #68414c;background:#221e24;color:white;border-radius:5px}
+.roster-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.roster-card{min-width:0;border:1px solid #4b333d;background:linear-gradient(145deg,#21171e,#17151a);border-radius:7px;overflow:hidden}
+.roster-card:hover{border-color:#dc3a53;transform:translateY(-3px);transition:.2s}
+.roster-card button{width:100%;border:0;background:none;color:inherit;text-align:left;padding:0;display:block;height:100%}
+.roster-photo{height:145px;display:grid;place-items:center;background:radial-gradient(circle at 65% 30%,#702535,#25141e);position:relative;overflow:hidden}
+.roster-photo img{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;object-position:center 30%;filter:saturate(.8) contrast(1.1)}
+.roster-monogram{font:1000 67px/1 Impact,Arial,sans-serif;color:#fff2f1;opacity:.6;letter-spacing:-.04em}
+.roster-name{padding:13px}
+.roster-name strong{display:block;font:1000 24px/1 Impact,Arial,sans-serif;margin-bottom:7px}
+.roster-name span{font-size:10px;color:#ff8da0;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+.roster-name p{font-size:11px;line-height:1.5;color:#c8bdc2;margin:7px 0 0}
+.roster-guide{color:#bfb4ba;font-size:11px;margin-top:15px;line-height:1.65}
+.roster-guide a{color:#ff8297;text-decoration:underline}
+.profile-modal h3{font:1000 35px Impact,Arial,sans-serif;margin:15px 0}
+.profile-modal p{font-size:14px;line-height:1.7;color:#ded4d8}
+.profile-modal .stat{border-top:1px solid #563944;padding:11px 0;color:#eae0e3}
+.credits{border-top:1px solid #51313b;padding:15px 0;margin-top:15px;font-size:10px;color:#c7bcc1;line-height:1.75}
+.credits a{color:#ff9bab}
+@media(max-width:1050px){.hero-grid{grid-template-columns:1fr 1fr}.hero-photo{min-height:500px}.roster-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:740px){.hero-grid{grid-template-columns:1fr}.hero-content{padding:45px 0 45px}.hero-photo{height:265px;min-height:265px;grid-row:1}.hero-photo img{object-position:center 43%}.roster-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card-art{height:170px}.roster-controls input{min-width:100%}}
+@media(max-width:380px){.roster-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -79,33 +135,14 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
 <div class="topline">THE FIGHT. THE FALLOUT. THE FACTS. &nbsp; ✦ &nbsp; INDEPENDENT WRESTLING NEWSROOM — DESIGN PREVIEW</div>
 <nav><div class="wrap nav-inner">
   <a href="#" class="logo" aria-label="WrestleWire homepage"><svg class="brand-mask" viewBox="0 0 150 170" aria-hidden="true"><use href="#maskIcon"/></svg><span>WRESTLE<b>WIRE</b></span></a>
-  <div class="navlinks"><button data-nav="WWE">WWE</button><button data-nav="AEW">AEW</button><button data-nav="Business">Business</button><button data-nav="Analysis">Analysis</button></div>
-  <div class="launch">● PRE-LAUNCH DEMO</div>
+  <div class="navlinks"><button data-nav="WWE">WWE</button><button data-nav="AEW">AEW</button><button data-nav="Business">Business</button><button data-nav="Analysis">Analysis</button><button id="goRoster">WRESTLERS</button></div>
+  <div class="launch">● INDEPENDENT WRESTLING HUB</div>
 </div></nav>
 <section class="hero"><div class="wrap hero-grid">
   <div class="hero-content"><div class="eyebrow">✦ &nbsp; The independent ringside report</div><h1>BEYOND<br><span class="outline">THE</span> <em>BELL.</em></h1><p>From flying luchadors to billion-dollar business. WWE, AEW, rivalries, ratings and the stories that shake the squared circle.</p><a class="cta" href="#latest">ENTER THE NEWSROOM <span aria-hidden="true">↗</span></a><div class="hero-motif"><span></span>NO FAKE SCOOPS. ALL THE ACTION.</div></div>
-  <div class="hero-art" aria-label="Original illustration of masked high-flying wrestlers over a ring">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 590" role="img" aria-label="High-flying masked wrestler artwork">
-      <defs><radialGradient id="spot" cx="50%" cy="43%" r="60%"><stop stop-color="#ff6983" stop-opacity=".75"/><stop offset="1" stop-color="#720827" stop-opacity="0"/></radialGradient><pattern id="dots" width="17" height="17" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#fff" opacity=".22"/></pattern></defs>
-      <circle cx="310" cy="300" r="260" fill="url(#spot)"/><circle cx="310" cy="300" r="245" fill="none" stroke="#ff9ba9" stroke-width="2" opacity=".3"/><circle cx="310" cy="300" r="215" fill="url(#dots)"/>
-      <path d="M44 520L550 424M32 549L557 462M30 578L558 499" stroke="#f5e8e4" opacity=".6" stroke-width="7"/>
-      <path d="M45 483L540 397 566 522 130 590Z" fill="#191117" stroke="#f4d8db" stroke-width="6"/><path d="M45 483L540 397" stroke="#ed243a" stroke-width="8"/><path d="M55 523L550 437" stroke="#ed243a" stroke-width="7"/><path d="M60 562L560 478" stroke="#ed243a" stroke-width="7"/>
-      <g fill="#ffeff0" opacity=".8"><path d="M84 50 108 8l13 53Z"/><path d="M480 80 547 33l-31 73Z"/></g><path d="M85 205 5 180l75 48-70 44 98-32Z" fill="#ffffff35"/><path d="M422 140 560 126l-114 43 96 42-122-20Z" fill="#ffffff30"/>
-      <g transform="translate(56 22) rotate(-22 295 310)">
-        <path d="M242 228 174 253 118 213 95 227 153 298q13 17 36 5l74-31Z" fill="#fff9f5" stroke="#151017" stroke-width="11" stroke-linejoin="round"/>
-        <path d="M321 224 391 210 442 157 472 176 419 270q-11 18-35 18l-83-6Z" fill="#fff8f4" stroke="#151017" stroke-width="11" stroke-linejoin="round"/>
-        <path d="M234 274Q219 331 185 369l-77 34 14 40 103-29q53-23 72-102Z" fill="#e92444" stroke="#151017" stroke-width="12" stroke-linejoin="round"/>
-        <path d="M300 284Q337 329 394 350l68 49-23 37-87-36q-80-23-101-74Z" fill="#f3ebe5" stroke="#151017" stroke-width="12" stroke-linejoin="round"/>
-        <path d="M101 401 77 421 105 458 143 444l-8-39ZM453 389l34-10 20 41-61 25-14-23Z" fill="#16131b" stroke="#f6f1ef" stroke-width="8"/>
-        <path d="M233 197q54-18 91 9l9 104-115 15-31-78Z" fill="#f5eee9" stroke="#151017" stroke-width="13"/>
-        <path d="M231 208q49-32 96 10l-12 41-71-5Z" fill="#ed243a"/><path d="M239 259 315 259" stroke="#151017" stroke-width="11"/>
-        <path d="M251 122q-14-22 2-50l24-23 31 19q31 35 9 66l-21 47-43-10Z" fill="#f7f0ec" stroke="#151017" stroke-width="12"/>
-        <path d="M260 72 276 41l14 30 27-3 4 23-38 12Z" fill="#eb2642"/><path d="M242 124q16-35 44-23l-10 27-31 15ZM286 103q28-15 41 10l-19 25-30-9Z" fill="#151017"/><path d="m270 147 13 14 20-15" stroke="#ed243a" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M263 181 294 192" stroke="#151017" stroke-width="10"/>
-      </g>
-      <g transform="translate(405 430) rotate(16)"><circle r="31" fill="#17131a" stroke="#fff" stroke-width="6"/><path d="M-20-12Q0-22 20-12L11 4-10 4Z" fill="#e92240"/></g>
-      <text x="38" y="560" font-family="Impact,Arial" font-size="48" fill="#fff4eb" font-weight="900" transform="rotate(-8 38 560)">HIGH FLYERS</text>
-    </svg>
-    <div class="hero-sticker"><div>100%<br><strong>RING</strong><br>CULTURE</div></div>
+  <div class="hero-photo" aria-label="Authentic professional wrestling action photograph of Ricochet">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ricochet_over_the_ropes.jpg?width=1200" loading="eager" alt="Ricochet performs a dramatic aerial wrestling move in the ring, captured by Tabercil" referrerpolicy="no-referrer">
+    <div class="photo-tag">Real action photograph: Tabercil / <a href="https://commons.wikimedia.org/wiki/File:Ricochet_over_the_ropes.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> · CSS crop</div>
   </div>
 </div></section>
 <div class="ticker"><div class="wrap"><strong>✦ BREAKING THE STORY</strong><span>WWE NEWS</span><span class="spark">✦</span><span>AEW NEWS</span><span class="spark">✦</span><span>BUSINESS & RATINGS</span><span class="spark">✦</span><span>LUCHA CULTURE</span><span class="spark">✦</span><span>INDEPENDENT ANALYSIS</span></div></div>
@@ -116,8 +153,8 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
 <div class="metric"><strong>LUCHA</strong><small>High-flying culture</small></div>
 </div>
 <main class="wrap">
-<section id="latest">
-  <div class="section-title"><div><div class="eyebrow">★ &nbsp; Main event coverage</div><h2>THE <span>LATEST.</span></h2></div><div class="note">Independent commentary and sourced explainers. Sample articles until the newsroom launches.</div></div>
+<section id="latest" class="section-anchor">
+  <div class="section-title"><div><div class="eyebrow">★ &nbsp; Main event coverage</div><h2>THE <span>LATEST.</span></h2></div><div class="note">Original explainers and verified official-source news briefs — tap anywhere on a card to read a complete page.</div></div>
   <div class="news-layout"><div>
     <div id="filters" class="filters"></div>
     <div class="searchrow"><span class="glass" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find stories: WWE, AEW, injury, revenue..." aria-label="Search wrestling articles"></div>
@@ -133,6 +170,17 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
     <div class="sidebox"><div class="eyebrow">NEWSROOM CODE</div><h3>REAL STORIES.<br>NO FAKE HEAT.</h3><p>Unverified injuries, salaries or contract rumors are not presented as facts. This version showcases the design and editorial direction.</p></div>
     <div class="fakead">FUTURE AD PLACEMENT<br>Not monetized yet</div>
   </aside></div>
+</section>
+<section class="roster-feature section-anchor" id="roster">
+  <div class="eyebrow">✦ THE LOCKER ROOM — WRESTLER ENCYCLOPEDIA STARTER</div>
+  <h2>WRESTLER <span>INDEX.</span></h2>
+  <p class="roster-description">Search WWE, AEW and wrestling legends. Every profile opens an interactive career summary with notable matchups and transparent earnings-data limitations. This index is growing; it is not a complete world registry.</p>
+  <div class="roster-controls">
+    <input id="rosterSearch" type="search" placeholder="Search wrestler, promotion, rivals, style..." aria-label="Search wrestler profiles">
+    <select id="rosterFilter" aria-label="Filter wrestler directory"><option value="all">All wrestlers</option><option value="WWE">WWE associated</option><option value="AEW">AEW associated</option><option value="Legend">Legends & retirees</option></select>
+  </div>
+  <div class="roster-grid" id="rosterGrid"></div><div id="rosterEmpty" class="empty">No wrestler matches this filter.</div>
+  <p class="roster-guide">Roster affiliations and career status can change. Profiles summarize established career associations and notable opponents, not exhaustive match-by-match records. No private salary estimates are presented as facts.</p>
 </section>
 <!-- WRESTLEWIRE_SOURCE_RADAR_START -->
 <section class="auto-radar" id="official-sources" aria-labelledby="radar-heading"><div class="eyebrow">✦ DIRECT FROM THE PROMOTIONS</div><h2 id="radar-heading">OFFICIAL <span>SOURCE RADAR.</span></h2><p class="radar-intro">Automatically updated links from WWE and AEW official video feeds. Links and video titles are attributed to their publishers; they are not original WrestleWire reporting.</p><div class="radar-grid"><article class="radar-card"><div class="radar-meta"><span>WWE OFFICIAL VIDEO</span> <time datetime="2026-11-22">2026-11-22</time></div><h3>We still ❤️Hacksaw</h3><p>New upload listed by the promotion’s official YouTube channel. This is a source link, not an independently verified news article.</p><a href="https://www.youtube.com/watch?v=HEWm8UOcNkc" target="_blank" rel="noopener noreferrer nofollow">WATCH OFFICIAL SOURCE ↗</a></article>
@@ -150,7 +198,7 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
 <article class="radar-card"><div class="radar-meta"><span>WWE OFFICIAL VIDEO</span> <time datetime="2026-11-22">2026-11-22</time></div><h3>Daga, Angel &amp; Berto vs. La Parka, El Grande &amp; Rey Fenix | Title Match: Lucha Libre AAA highlights</h3><p>New upload listed by the promotion’s official YouTube channel. This is a source link, not an independently verified news article.</p><a href="https://www.youtube.com/watch?v=9RsTFfj5jIw" target="_blank" rel="noopener noreferrer nofollow">WATCH OFFICIAL SOURCE ↗</a></article>
 <article class="radar-card"><div class="radar-meta"><span>WWE OFFICIAL VIDEO</span> <time datetime="2026-11-22">2026-11-22</time></div><h3>La Catalina saves Faby Apache from Las Tóxicas: Lucha Libre AAA highlights: Nov. 21, 2026</h3><p>New upload listed by the promotion’s official YouTube channel. This is a source link, not an independently verified news article.</p><a href="https://www.youtube.com/watch?v=2HaA2c3Kzro" target="_blank" rel="noopener noreferrer nofollow">WATCH OFFICIAL SOURCE ↗</a></article></div><p class="radar-disclaimer">Source Radar refresh is best-effort and depends on official feed availability. Video uploads and on-screen storylines do not independently confirm rumors, injuries or salary figures.</p></section>
 <!-- WRESTLEWIRE_SOURCE_RADAR_END -->
-<section class="promo"><div class="promo-copy"><div class="eyebrow">Our design language</div><h2>MASKS. MOMENTS. MAIN EVENTS.</h2><p>An original luchador-inspired visual identity, without copying WWE or AEW logos, wrestling photos, or performers' likenesses. Automated reporting will be added only after sources and publishing safety checks are configured.</p></div><svg viewBox="0 0 150 170" aria-hidden="true"><use href="#maskIcon"/></svg></section>
+<section class="promo"><div class="promo-copy"><div class="eyebrow">Photo-led editorial direction</div><h2>REAL ACTION. REAL SOURCES.</h2><p>Licensed action photography, verified publisher feeds and original wrestling explainers replace comic-style graphics. All photos are individually credited below.</p></div><div style="padding:15px;color:#fce3e5;font:1000 50px Impact,Arial,sans-serif;align-self:center">W<span style="color:#ed243a">W</span></div></section>
 </main>
 <section id="publication-policies" class="policy-panel" aria-label="WrestleWire publication information">
 <div class="eyebrow">INDEPENDENT · SOURCE-FIRST · TRANSPARENT</div>
@@ -160,7 +208,7 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
 <section><h3>Editorial & corrections</h3><p>We separate official announcements, independently corroborated reports, opinion and unverified speculation. We do not invent injuries, private salaries, attendance or company revenue figures.</p><p>If an error is spotted, provide the article title, disputed statement and source evidence via <a href="https://github.com/yuvraajsingh1155-cloud/wrestlewire-site/issues" target="_blank" rel="noopener noreferrer">the project’s issue tracker</a>. Submissions may be public. Corrections will be attributed or noted where appropriate.</p></section>
 <section><h3>Privacy & contact</h3><p>The current demonstration has no user account, payment form, newsletter signup or site-run advertising script. Hosting and linked external services may independently process visitor information under their own policies.</p><p>Do not post private personal information in public GitHub issues. Before analytics, newsletter or ads are introduced, this notice must be updated to reflect those services and applicable consent requirements.</p><p><a href="https://github.com/yuvraajsingh1155-cloud/wrestlewire-site" target="_blank" rel="noopener noreferrer">Project and contact information ↗</a></p></section>
 </div></section>
-<footer class="footer"><div class="wrap"><div><div class="logo" style="font-size:24px">WRESTLE<b>WIRE</b></div><p class="small">Independent wrestling news concept. Not affiliated with WWE, AEW or their talent. No automatic reporting, adverts or paid subscriptions are enabled in this demonstration.</p></div><div class="footerlinks"><a href="#publication-policies">About · Privacy · Corrections</a><a href="#latest">News</a><a href="https://www.wwe.com/" target="_blank" rel="noopener noreferrer">WWE Official</a><a href="https://www.allelitewrestling.com/" target="_blank" rel="noopener noreferrer">AEW Official</a></div></div></footer>
+<footer class="footer"><div class="wrap"><div><div class="logo" style="font-size:24px">WRESTLE<b>WIRE</b></div><p class="small">Independent wrestling news concept. Not affiliated with WWE, AEW or their talent. No automatic reporting, adverts or paid subscriptions are enabled in this demonstration.</p></div><div class="footerlinks"><a href="#publication-policies">About · Privacy · Corrections</a><a href="#latest">News</a><a href="https://www.wwe.com/" target="_blank" rel="noopener noreferrer">WWE Official</a><a href="https://www.allelitewrestling.com/" target="_blank" rel="noopener noreferrer">AEW Official</a></div></div><div class="wrap credits">Photo credits: <a href="https://commons.wikimedia.org/wiki/File:Ricochet_over_the_ropes.jpg" target="_blank" rel="noopener noreferrer">Ricochet aerial move — Tabercil (CC BY-SA 3.0)</a>; <a href="https://commons.wikimedia.org/wiki/File:Rey_Mysterio_Headbutt.jpg" target="_blank" rel="noopener noreferrer">Rey Mysterio vs CM Punk — Joe Loong (CC BY-SA 2.0)</a>; <a href="https://commons.wikimedia.org/wiki/File:Adam_Page_Moonsault_part_3.jpg" target="_blank" rel="noopener noreferrer">Hangman Adam Page moonsault — grenwail (CC BY 2.0)</a>. Photos are cropped for layouts using CSS. Attribution does not imply endorsement.</div></footer>
 <dialog id="reader" aria-labelledby="storyTitle"><button class="close" id="close">← RETURN TO THE NEWSROOM</button><div id="article"></div></dialog>
 <script>
 (function(){
@@ -171,6 +219,8 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
     {cat:"Analysis",art:"ring",palette:"grey",tag:"ANALYSIS / EXPLAINER",title:"A Sold-Out Arena Doesn't Tell the Whole Story",desc:"Understanding venue capacity, paid attendance and tickets distributed.",source:"WrestleWire editorial explainer",url:"",body:["An arena can have different seating capacities depending on its event setup. Wrestling productions may block seating with stages, ramps or production equipment.","Tickets distributed are not necessarily tickets sold, and reported attendance is not always a paid attendance figure.","Before we publish a comparison, the metric and its provenance must be clear."]},
     {cat:"WWE",art:"bolt",palette:"purple",tag:"WWE / FACT CHECK",title:"Injured or Just Off TV? A Fact-Check Guide",desc:"Real medical updates require more than a viral clip or an on-screen injury angle.",source:"WrestleWire editorial policy",url:"",body:["Professional wrestling contains fictional storytelling alongside genuine athletic risk. Viewer footage alone often cannot establish a performer's medical status.","Look for a direct announcement or reputable attributed reporting before treating an injury as confirmed.","Our intended automated pipeline will hold sensitive claims for review instead of auto-publishing speculation."]},
     {cat:"AEW",art:"mask",palette:"red",tag:"AEW / CULTURE",title:"The Art of Lucha: Why the Mask Matters",desc:"From bold identities to acrobatic storytelling inside the squared circle.",source:"WrestleWire original cultural explainer",url:"",body:["Lucha libre has a rich tradition of masks, distinctive ring identities and dynamic aerial techniques.","Mask imagery represents much more than decoration to many wrestling fans and performers. WrestleWire's artwork is original and does not reproduce an identifiable performer's mask.","This article is an editorial demonstration rather than a live news report."]}
+    {"cat":"WWE","art":"flyer","palette":"red","tag":"WWE / OFFICIAL UPDATE","title":"WWE Shares Its Survivor Series Top-10 Special Edition","desc":"Official WWE upload dated Nov. 22, 2026 — a source-linked update, not a new match result.","source":"WWE verified video feed","url":"https://www.youtube.com/watch?v=uXETwSrKfxs","body":["The official WWE channel listed a Survivor Series Top 10 special edition upload on November 22, 2026. The source video is a retrospective rather than a standalone confirmation of future bookings.","Use the official source to see exactly what was published."]},
+    {"cat":"AEW","art":"flyer","palette":"gold","tag":"AEW / OFFICIAL UPDATE","title":"AEW Highlights Jay White vs Ricochet on Collision","desc":"Official feed lists an AEW Collision Continental Classic matchup on Nov. 21, 2026.","source":"AEW verified video feed","url":"https://www.youtube.com/watch?v=SmBswL7tXhg","body":["AEW’s official YouTube feed lists a Jay White vs Ricochet matchup from Collision in November 2026. The video title supports the matchup, not unsupported claims about the result.","The source brief explains the difference."]},
   ];
   let active="All",search="";
   const filters=document.getElementById("filters"),cards=document.getElementById("cards"),empty=document.getElementById("empty"),reader=document.getElementById("reader"),article=document.getElementById("article");
@@ -186,13 +236,31 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
   }
   function render(){
     filters.replaceChildren();
-    ["All","WWE","AEW","Business","Analysis"].forEach(c=>{const b=document.createElement("button");b.className="filter"+(active===c?" active":"");b.textContent=c;b.setAttribute("aria-pressed",String(active===c));b.onclick=()=>{active=c;render()};filters.appendChild(b)});
+    ["All","WWE","AEW","Business","Analysis"].forEach(category=>{
+      const b=document.createElement("button");b.className="filter"+(active===category?" active":"");b.textContent=category;
+      b.setAttribute("aria-pressed",String(active===category));b.onclick=()=>{active=category;render()};filters.append(b);
+    });
     cards.replaceChildren();
     const found=articles.filter(s=>(active==="All"||s.cat===active)&&[s.title,s.cat,s.desc,s.tag].join(" ").toLowerCase().includes(search));
     empty.style.display=found.length?"none":"block";
-    found.forEach(s=>{const card=document.createElement("article");card.className="card";const art=document.createElement("div");art.className="card-art "+s.palette;art.appendChild(iconSvg(s.art));const badge=document.createElement("span");badge.className="badge";badge.textContent=s.cat.toUpperCase();art.appendChild(badge);
-      const body=document.createElement("div");body.className="card-body";const cat=document.createElement("div");cat.className="category";cat.textContent=s.tag;const h=document.createElement("h3");h.textContent=s.title;const desc=document.createElement("p");desc.textContent=s.desc;
-      const foot=document.createElement("div");foot.className="card-foot";const btn=document.createElement("button");btn.className="read";btn.textContent="READ STORY ↗";btn.onclick=()=>openStory(s);const note=document.createElement("small");note.textContent="EDITORIAL DEMO";foot.append(btn,note);body.append(cat,h,desc,foot);card.append(art,body);cards.appendChild(card);
+    found.forEach(s=>{
+      const card=document.createElement("article");card.className="card";
+      const whole=document.createElement("a");whole.className="card-whole-link";
+      const slug=urlMap[s.title]||"wwe-smackdown-rumor-check";whole.href="/articles/"+slug+"/";
+      whole.setAttribute("aria-label","Read complete article: "+s.title);
+      const art=document.createElement("div");art.className="card-art "+s.palette;
+      const imageSource=s.cat==="WWE"?"https://commons.wikimedia.org/wiki/Special:FilePath/Rey_Mysterio_Headbutt.jpg?width=750":s.cat==="AEW"?"https://commons.wikimedia.org/wiki/Special:FilePath/Adam_Page_Moonsault_part_3.jpg?width=750":null;
+      if(imageSource){const img=document.createElement("img");img.src=imageSource;img.loading="lazy";img.alt=s.cat==="WWE"?"Historic WWE action photo of Rey Mysterio and CM Punk":"Historic AEW action photo of Hangman Adam Page";art.append(img);art.classList.add("photo-art");}
+      else{const word=document.createElement("div");word.className="cover-word";word.textContent=s.cat==="Business"?"THE BUSINESS":"RINGSIDE";art.append(word);}
+      const badge=document.createElement("span");badge.className="badge";badge.textContent=s.cat.toUpperCase();art.append(badge);
+      const body=document.createElement("div");body.className="card-body";
+      const cat=document.createElement("div");cat.className="category";cat.textContent=s.tag;
+      const h=document.createElement("h3");h.textContent=s.title;
+      const desc=document.createElement("p");desc.textContent=s.desc;
+      const foot=document.createElement("div");foot.className="card-foot";
+      const more=document.createElement("span");more.className="read";more.textContent="READ FULL ARTICLE ↗";
+      const note=document.createElement("small");note.className="free-label";note.textContent="SOURCE-LINKED";
+      foot.append(more,note);body.append(cat,h,desc,foot);whole.append(art,body);card.append(whole);cards.append(card);
     });
   }
   function openStory(s){
@@ -207,6 +275,47 @@ dialog{background:#141318;border:1px solid #a92a40;color:white;width:min(710px,9
   document.getElementById("search").addEventListener("input",e=>{search=e.target.value.trim().toLowerCase();render()});
   document.getElementById("close").addEventListener("click",()=>reader.close());
   document.querySelectorAll("[data-nav]").forEach(b=>b.addEventListener("click",()=>{active=b.dataset.nav;render();document.getElementById("latest").scrollIntoView({behavior:"smooth"})}));
+  const urlMap={"SmackDown, Storylines and the Rumor Mill":"wwe-smackdown-rumor-check","High Flyers, Big Moments: Inside AEW Coverage":"aew-official-show-coverage","WWE vs AEW Revenue: Why the Numbers Need Context":"wwe-vs-aew-revenue","Wrestling Attendance: Venue Capacity Is Not Tickets Sold":"wrestling-attendance-guide","Wrestler Injury Rumors: A Responsible Reporting Checklist":"wrestler-injury-verification","Why the Luchador Mask Matters":"lucha-libre-masks-history","WWE Shares Its Survivor Series Top-10 Special Edition":"survivor-series-2026-official-video","AEW Highlights Jay White vs Ricochet on Collision":"aew-collision-2026-source"};
+  const wrestlerDirectory=[{"n":"Roman Reigns","p":"WWE","s":"Modern main-event heavyweight","history":"WWE / The Shield / Bloodline-era storytelling","r":"Cody Rhodes, Seth Rollins, Brock Lesnar","income":"Individual salary is not verified as public fact."},{"n":"Cody Rhodes","p":"WWE","s":"Multi-promotion main-event star","history":"WWE, AEW, NJPW and independent wrestling","r":"Roman Reigns, Seth Rollins, Brock Lesnar","income":"Contract and merchandise income details are not fully public."},{"n":"Seth Rollins","p":"WWE","s":"Versatile technical and aerial performer","history":"WWE, Ring of Honor (as Tyler Black) and independent wrestling","r":"Roman Reigns, CM Punk, Cody Rhodes","income":"Exact lifetime earnings cannot be verified."},{"n":"Rhea Ripley","p":"WWE","s":"Powerful modern women’s division star","history":"WWE, NXT and earlier Australian independent wrestling","r":"Becky Lynch, Charlotte Flair, Liv Morgan","income":"Exact salary is not reliably public."},{"n":"Rey Mysterio","p":"WWE Legend","s":"Lucha libre and high-flying icon","history":"Mexico, ECW, WCW and WWE","r":"Eddie Guerrero, CM Punk, Kurt Angle","income":"Public salary estimates vary and are not treated as facts.","photo":"https://commons.wikimedia.org/wiki/Special:FilePath/Rey_Mysterio_Headbutt.jpg?width=750"},{"n":"CM Punk","p":"WWE","s":"Promo-driven veteran and technical wrestler","history":"Ring of Honor, WWE and AEW","r":"John Cena, Seth Rollins, Drew McIntyre","income":"Private contract amounts not verified."},{"n":"Kenny Omega","p":"AEW","s":"International main-event technician","history":"NJPW, DDT, AEW and independent wrestling","r":"Kazuchika Okada, Jon Moxley, Will Ospreay","income":"Exact career earnings unavailable."},{"n":"Jon Moxley","p":"AEW","s":"Hard-hitting brawler","history":"WWE (as Dean Ambrose), AEW, NJPW and independent wrestling","r":"Kenny Omega, Bryan Danielson, Hangman Page","income":"Personal earnings are not audited public figures."},{"n":"Hangman Adam Page","p":"AEW","s":"Athletic modern main-eventer","history":"Ring of Honor, NJPW and AEW","r":"Kenny Omega, Jon Moxley, Swerve Strickland","income":"Exact pay is private.","photo":"https://commons.wikimedia.org/wiki/Special:FilePath/Adam_Page_Moonsault_part_3.jpg?width=750"},{"n":"Will Ospreay","p":"AEW","s":"High-flying international standout","history":"UK independent wrestling, NJPW, AEW","r":"Kenny Omega, Kazuchika Okada, Ricochet","income":"Career revenue has no authoritative public total."},{"n":"Ricochet","p":"AEW","s":"Explosive aerial specialist","history":"Independent wrestling, NJPW, WWE and AEW","r":"Will Ospreay, Josh Alexander, Rey Mysterio","income":"Private salary details unverified.","photo":"https://commons.wikimedia.org/wiki/Special:FilePath/Ricochet_over_the_ropes.jpg?width=1200"},{"n":"Mercedes Moné","p":"AEW","s":"Globally known women’s wrestler","history":"WWE (as Sasha Banks), NJPW/STARDOM appearances, AEW","r":"Bayley, Bianca Belair, Willow Nightingale","income":"Exact career income is not publicly verified."},{"n":"Sting","p":"AEW Legend","s":"Retired icon with decades of influence","history":"NWA/WCW, TNA, WWE and AEW","r":"Ric Flair, Hulk Hogan, Darby Allin (tag partner)","income":"Estimates of lifetime earnings are not official."},{"n":"The Undertaker","p":"WWE Legend","s":"Retired character and WrestleMania legend","history":"WCW briefly, WWE for most of career","r":"Shawn Michaels, Kane, Triple H","income":"No verified lifetime earnings figure."},{"n":"John Cena","p":"WWE Legend","s":"Mainstream crossover star","history":"WWE and entertainment media","r":"Randy Orton, Edge, CM Punk","income":"Film earnings and wrestling contracts are different private/public categories."},{"n":"Becky Lynch","p":"WWE","s":"Major modern women's division star","history":"Independent wrestling and WWE","r":"Charlotte Flair, Bianca Belair, Rhea Ripley","income":"Exact career income not publicly established."}];
+  const extraArticles=[{"cat":"WWE","art":"flyer","palette":"red","tag":"WWE / OFFICIAL UPDATE","title":"WWE Shares Its Survivor Series Top-10 Special Edition","desc":"Official WWE upload dated Nov. 22, 2026 — a source-linked update, not a new match result.","source":"WWE verified video feed","url":"https://www.youtube.com/watch?v=uXETwSrKfxs","body":["The official WWE channel listed a Survivor Series Top 10 special edition upload on November 22, 2026. The source video is a retrospective rather than a standalone confirmation of future bookings.","Use the official source to see exactly what was published."]},{"cat":"AEW","art":"flyer","palette":"gold","tag":"AEW / OFFICIAL UPDATE","title":"AEW Highlights Jay White vs Ricochet on Collision","desc":"Official feed lists an AEW Collision Continental Classic matchup on Nov. 21, 2026.","source":"AEW verified video feed","url":"https://www.youtube.com/watch?v=SmBswL7tXhg","body":["AEW’s official YouTube feed lists a Jay White vs Ricochet matchup from Collision in November 2026. The video title supports the matchup, not unsupported claims about the result.","The source brief explains the difference."]}];
+  const rosterEl=document.getElementById("rosterGrid");
+  const rosterFilter=document.getElementById("rosterFilter");
+  const rosterSearch=document.getElementById("rosterSearch");
+  const rosterEmpty=document.getElementById("rosterEmpty");
+  let rosterQuery="";
+  function renderRoster(){
+    const group=rosterFilter.value;
+    const found=wrestlerDirectory.filter(w=>(group==="all"||w.p.includes(group))&&[w.n,w.p,w.s,w.history,w.r].join(" ").toLowerCase().includes(rosterQuery));
+    rosterEl.replaceChildren();
+    rosterEmpty.style.display=found.length?"none":"block";
+    found.forEach(w=>{
+      const box=document.createElement("article");box.className="roster-card";
+      const btn=document.createElement("button");btn.type="button";btn.setAttribute("aria-label","Read wrestler profile: "+w.n);
+      const photo=document.createElement("div");photo.className="roster-photo";
+      if(w.photo){const img=document.createElement("img");img.src=w.photo;img.alt="Licensed photograph of "+w.n;img.loading="lazy";photo.append(img);}
+      else{const initials=document.createElement("span");initials.className="roster-monogram";initials.textContent=w.n.split(" ").slice(0,2).map(x=>x[0]).join("");photo.append(initials);}
+      const info=document.createElement("div");info.className="roster-name";
+      const n=document.createElement("strong");n.textContent=w.n;
+      const p=document.createElement("span");p.textContent=w.p;
+      const d=document.createElement("p");d.textContent=w.s;
+      info.append(n,p,d);btn.append(photo,info);btn.onclick=()=>openWrestler(w);box.append(btn);rosterEl.append(box);
+    });
+  }
+  function openWrestler(w){
+    article.replaceChildren();
+    const el=document.createElement("div");el.className="profile-modal";
+    const kicker=document.createElement("div");kicker.className="eyebrow";kicker.textContent=w.p+" / WRESTLER PROFILE";
+    const head=document.createElement("h3");head.textContent=w.n;
+    const desc=document.createElement("p");desc.textContent=w.s;
+    el.append(kicker,head,desc);
+    [["Career promotions",w.history],["Notable opponents / rivalries",w.r],["Income disclosure",w.income],["Coverage status","Starter profile. This is not a complete match-by-match history; affiliations may change."]].forEach(([label,value])=>{const row=document.createElement("div");row.className="stat";const strong=document.createElement("strong");strong.textContent=label+": ";row.append(strong,document.createTextNode(value));el.append(row);});
+    article.append(el);reader.showModal();
+  }
+  rosterSearch.addEventListener("input",e=>{rosterQuery=e.target.value.trim().toLowerCase();renderRoster();});
+  rosterFilter.addEventListener("change",renderRoster);
+  document.getElementById("goRoster").addEventListener("click",()=>document.getElementById("roster").scrollIntoView({behavior:"smooth"}));
+  renderRoster();
+
   render();
 })();
 </script>
