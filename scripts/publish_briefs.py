@@ -21,6 +21,7 @@ BASE = "https://wrestlewire-site.yuvraajsingh1155.workers.dev"
 START = "<!-- WRESTLEWIRE_AUTO_BRIEFS_START -->"
 END = "<!-- WRESTLEWIRE_AUTO_BRIEFS_END -->"
 MAX_NEW_PER_RUN = 2
+MAX_NEW_PER_DAY = 2
 MAX_CARDS = 12
 MAX_NEWS_PAGES = 120
 
@@ -67,7 +68,7 @@ def page(item: dict) -> str:
     canonical = f"{BASE}/news/{vid}/"
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="noindex,follow">
 <title>{title} | {name} Official Source | WrestleWire</title>
 <meta name="description" content="Verified {name} official video upload, {published}. Publisher attribution, source link and editorial context.">
 <link rel="canonical" href="{canonical}">
@@ -126,10 +127,14 @@ def refresh() -> int:
     entries = all_items()
     pages = current_pages()
     known = {p.parent.name for p in pages}
+    old_ids = set(known)
+    today = dt.datetime.now(dt.timezone.utc).date().isoformat()
+    published_today = sum(today in p.read_text(encoding="utf-8")[:2000] for p in pages)
+    created_this_run = 0
     for item in entries:
         if len(known) >= MAX_NEWS_PAGES:
             break
-        if item["video_id"] not in known and len([x for x in known if x not in {p.parent.name for p in pages}]) >= MAX_NEW_PER_RUN:
+        if created_this_run >= MAX_NEW_PER_RUN or published_today + created_this_run >= MAX_NEW_PER_DAY:
             break
         if item["video_id"] in known:
             continue
@@ -138,6 +143,7 @@ def refresh() -> int:
         file.parent.mkdir(parents=True, exist_ok=True)
         file.write_text(page(item), encoding="utf-8")
         known.add(vid)
+        created_this_run += 1
 
     pages = current_pages()
     by_id = {item["video_id"]: item for item in entries}
@@ -153,19 +159,8 @@ def refresh() -> int:
         if changed != original:
             SITE.write_text(changed, encoding="utf-8")
 
-    if SITEMAP.exists():
-        xml = SITEMAP.read_text(encoding="utf-8")
-        try:
-            tree = ET.fromstring(xml)
-            locs = {n.text for n in tree.iter() if n.tag.endswith("loc")}
-        except ET.ParseError:
-            raise ValueError("Existing sitemap invalid; not overwriting")
-        urls = [f"{BASE}/news/{p.parent.name}/" for p in pages]
-        additions = "".join(f"  <url><loc>{url}</loc></url>\n" for url in urls if url not in locs)
-        if additions:
-            if "</urlset>" not in xml:
-                raise ValueError("Sitemap missing closing tag")
-            SITEMAP.write_text(xml.replace("</urlset>", additions + "</urlset>"), encoding="utf-8")
+    # Source metadata briefs are deliberately not indexed: substantial verified
+    # articles already live in the public sitemap. Prevent scaled-content SEO abuse.
     print(f"Official source briefs: {len(pages)} published; {len(shown)} recent cards")
     return len(pages)
 
