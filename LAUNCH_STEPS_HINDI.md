@@ -10,13 +10,20 @@
 
 ## अब आपको एक-एक करके क्या करना है
 
-### STEP 1 — GitHub Pages ON करना (अभी जरूरी)
-1. यह लिंक खोलें: https://github.com/yuvraajsingh1155-cloud/wrestlewire-site/settings/pages
-2. `Build and deployment > Source` में `GitHub Actions` चुनें।
-3. यहाँ जाएँ: https://github.com/yuvraajsingh1155-cloud/wrestlewire-site/actions
-4. `Publish WrestleWire to GitHub Pages` workflow खोलें। `Run workflow` चुनें, branch `main` रखें और run करें।
-5. Run successful होने के बाद site URL देखें: https://yuvraajsingh1155-cloud.github.io/wrestlewire-site/
-6. अगर GitHub permission या 404 error मिले, error का screenshot या text चैट में साझा करें।
+### STEP 1 — Recommended: Cloudflare Pages पर वेबसाइट LIVE करें (अभी जरूरी)
+GitHub Pages केवल learning/preview के लिए रखें। News business / ads site के लिए Cloudflare Pages जैसे उपयुक्त commercial hosting का उपयोग करें और current terms verify करें।
+1. https://dash.cloudflare.com/ पर जाएँ और अपना Cloudflare account sign in या create करें।
+2. Workers & Pages → Create application → Pages → Import an existing Git repository.
+3. GitHub से authorize करके `yuvraajsingh1155-cloud/wrestlewire-site` चुनें।
+4. Project name जैसे `wrestlewire-news`, production branch `main`, framework preset `None` रखें।
+5. Build command: `mkdir -p public && cp index.html public/index.html`
+6. Build output directory: `public`
+7. Save and Deploy. Successful होने पर Cloudflare आपको असली `*.pages.dev` URL देगा; URL पहले से अनुमान लगाकर इस्तेमाल न करें।
+8. उस URL को ChatGPT में शेयर करें ताकि live site जांची जा सके।
+Official docs: https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
+
+### Optional — GitHub Pages केवल demo preview
+यदि GitHub Pages पर भी demo चाहिए, तो repository Settings → Pages → Source: GitHub Actions चुनकर `Publish WrestleWire to GitHub Pages` workflow चला सकते हैं। इसे monetized business hosting न मानें।
 
 ### STEP 2 — Design approval
 - Live site खोलकर desktop और mobile view देखें।
