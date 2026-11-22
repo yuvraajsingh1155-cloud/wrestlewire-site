@@ -9,6 +9,7 @@ on:
       - 'scripts/ai_drafts.py'
       - 'tests/test_source_radar.py'
       - 'tests/test_publish_briefs.py'
+      - 'tests/test_ai_drafts.py'
       - '.github/workflows/wrestlewire.yml'
   schedule:
     # Every three hours; GitHub scheduling is best effort and may be delayed.
