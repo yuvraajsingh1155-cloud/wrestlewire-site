@@ -401,6 +401,13 @@ a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weigh
   loadMore.addEventListener("click",()=>{rosterPage++;renderRoster()});
   // Wikipedia page images are queried by exact article title, never a generic wrestling stock photo.
   // A missing image remains a labeled placeholder rather than displaying the wrong person's face.
+  // Illustrated portraits are original, named character cards rather than misleading real-life photographs.
+  function portraitArtwork(name,promotion){
+    const key=Array.from(name).reduce((n,ch)=>((n*31+ch.charCodeAt(0))>>>0),7);
+    const hue=key%360;const label=name.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    const initials=name.split(/\s+/).filter(Boolean).slice(0,2).map(x=>x[0]).join("").toUpperCase();
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 460" role="img" aria-label="Illustrated name card for '+label+'"><defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="hsl('+hue+',68%,27%)"/><stop offset="1" stop-color="#0a0c16"/></linearGradient></defs><rect width="420" height="460" fill="url(#g)"/><circle cx="210" cy="170" r="145" stroke="hsla('+hue+',90%,78%,.4)" stroke-width="9" fill="none"/><path d="M65 355 Q210 185 355 355" fill="none" stroke="hsla('+hue+',90%,78%,.45)" stroke-width="18"/><circle cx="210" cy="147" r="67" fill="#121827" stroke="hsla('+hue+',90%,78%,.8)" stroke-width="8"/><text x="210" y="267" font-family="Arial" font-weight="900" font-size="94" text-anchor="middle" fill="#fff">'+initials+'</text><rect x="15" y="372" width="390" height="70" rx="8" fill="#0b0d15" opacity=".9"/><text x="210" y="399" font-family="Arial" font-weight="900" font-size="23" text-anchor="middle" fill="#fff">'+label.slice(0,27)+'</text><text x="210" y="424" font-family="Arial" font-size="13" text-anchor="middle" fill="#ccc">ORIGINAL ILLUSTRATED DIRECTORY CARD</text></svg>';
+  }
   const wikiPhotoCache=new Map();
   const wikiAlias={"CM Punk":"CM Punk","The Great Khali":"The Great Khali","MJF (wrestler)":"Maxwell Jacob Friedman","PAC (wrestler)":"Pac (wrestler)","Kane (wrestler)":"Kane (wrestler)","Edge (wrestler)":"Adam Copeland","FTR (professional wrestling)":"FTR (professional wrestling)"};
   async function hydrateWrestlerPhotos(){
@@ -438,17 +445,17 @@ a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weigh
     loadMore.style.display=found.length>rosterPage*rosterPageSize?"inline-block":"none";
     found.slice(0,rosterPage*rosterPageSize).forEach(w=>{
       const box=document.createElement("article");box.className="roster-card";
-      const btn=document.createElement("a");btn.href="/wrestlers/"+w.n.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+"/";btn.setAttribute("aria-label","Read wrestler profile: "+w.n);
+      const btn=document.createElement("a");btn.href="/wrestlers/profile/?name="+encodeURIComponent(w.n)+"&promotion="+encodeURIComponent(w.p);btn.setAttribute("aria-label","Read wrestler profile: "+w.n);
       const photo=document.createElement("div");photo.className="roster-photo";
       if(w.photo){const img=document.createElement("img");img.src=w.photo;img.alt="Licensed photograph of "+w.n;img.loading="lazy";photo.append(img);}
-      else{const initials=document.createElement("span");initials.className="roster-monogram";initials.textContent=w.n.split(" ").slice(0,2).map(x=>x[0]).join("");photo.append(initials);photo.dataset.wikiTitle=wikiAlias[w.n]||w.n;}
+      else{const img=document.createElement("img");img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(portraitArtwork(w.n,w.p));img.alt="Original illustrated name card for "+w.n+"; not a photograph";img.loading="lazy";photo.append(img);}
       const info=document.createElement("div");info.className="roster-name";
       const n=document.createElement("strong");n.textContent=w.n;
       const p=document.createElement("span");p.textContent=w.p;
       const d=document.createElement("p");d.textContent=w.s;
       info.append(n,p,d);btn.append(photo,info);box.append(btn);rosterEl.append(box);
     });
-    hydrateWrestlerPhotos();
+    // All entries have an original portrait card without third-party image requests.
   }
   function openWrestler(w){
     article.replaceChildren();
