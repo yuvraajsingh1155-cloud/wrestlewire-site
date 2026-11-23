@@ -1,0 +1,114 @@
+[
+  {
+    "n": "Roman Reigns",
+    "p": "WWE",
+    "s": "Modern main-event heavyweight",
+    "history": "WWE / The Shield / Bloodline-era storytelling",
+    "r": "Cody Rhodes, Seth Rollins, Brock Lesnar"
+  },
+  {
+    "n": "Cody Rhodes",
+    "p": "WWE",
+    "s": "Multi-promotion main-event star",
+    "history": "WWE, AEW, NJPW and independent wrestling",
+    "r": "Roman Reigns, Seth Rollins, Brock Lesnar"
+  },
+  {
+    "n": "Seth Rollins",
+    "p": "WWE",
+    "s": "Versatile technical and aerial performer",
+    "history": "WWE, Ring of Honor (as Tyler Black) and independent wrestling",
+    "r": "Roman Reigns, CM Punk, Cody Rhodes"
+  },
+  {
+    "n": "Rhea Ripley",
+    "p": "WWE",
+    "s": "Powerful modern women’s division star",
+    "history": "WWE, NXT and earlier Australian independent wrestling",
+    "r": "Becky Lynch, Charlotte Flair, Liv Morgan"
+  },
+  {
+    "n": "Rey Mysterio",
+    "p": "WWE Legend",
+    "s": "Lucha libre and high-flying icon",
+    "history": "Mexico, ECW, WCW and WWE",
+    "r": "Eddie Guerrero, CM Punk, Kurt Angle"
+  },
+  {
+    "n": "CM Punk",
+    "p": "WWE",
+    "s": "Promo-driven veteran and technical wrestler",
+    "history": "Ring of Honor, WWE and AEW",
+    "r": "John Cena, Seth Rollins, Drew McIntyre"
+  },
+  {
+    "n": "Kenny Omega",
+    "p": "AEW",
+    "s": "International main-event technician",
+    "history": "NJPW, DDT, AEW and independent wrestling",
+    "r": "Kazuchika Okada, Jon Moxley, Will Ospreay"
+  },
+  {
+    "n": "Jon Moxley",
+    "p": "AEW",
+    "s": "Hard-hitting brawler",
+    "history": "WWE (as Dean Ambrose), AEW, NJPW and independent wrestling",
+    "r": "Kenny Omega, Bryan Danielson, Hangman Page"
+  },
+  {
+    "n": "Hangman Adam Page",
+    "p": "AEW",
+    "s": "Athletic modern main-eventer",
+    "history": "Ring of Honor, NJPW and AEW",
+    "r": "Kenny Omega, Jon Moxley, Swerve Strickland"
+  },
+  {
+    "n": "Will Ospreay",
+    "p": "AEW",
+    "s": "High-flying international standout",
+    "history": "UK independent wrestling, NJPW, AEW",
+    "r": "Kenny Omega, Kazuchika Okada, Ricochet"
+  },
+  {
+    "n": "Ricochet",
+    "p": "AEW",
+    "s": "Explosive aerial specialist",
+    "history": "Independent wrestling, NJPW, WWE and AEW",
+    "r": "Will Ospreay, Josh Alexander, Rey Mysterio"
+  },
+  {
+    "n": "Mercedes Moné",
+    "p": "AEW",
+    "s": "Globally known women’s wrestler",
+    "history": "WWE (as Sasha Banks), NJPW/STARDOM appearances, AEW",
+    "r": "Bayley, Bianca Belair, Willow Nightingale"
+  },
+  {
+    "n": "Sting",
+    "p": "AEW Legend",
+    "s": "Retired icon with decades of influence",
+    "history": "NWA/WCW, TNA, WWE and AEW",
+    "r": "Ric Flair, Hulk Hogan, Darby Allin (tag partner)"
+  },
+  {
+    "n": "The Undertaker",
+    "p": "WWE Legend",
+    "s": "Retired character and WrestleMania legend",
+    "history": "WCW briefly, WWE for most of career",
+    "r": "Shawn Michaels, Kane, Triple H"
+  },
+  {
+    "n": "John Cena",
+    "p": "WWE Legend",
+    "s": "Mainstream crossover star",
+    "history": "WWE and entertainment media",
+    "r": "Randy Orton, Edge, CM Punk"
+  },
+  {
+    "n": "Becky Lynch",
+    "p": "WWE",
+    "s": "Major modern women's division star",
+    "history": "Independent wrestling and WWE",
+    "r": "Charlotte Flair, Bianca Belair, Rhea Ripley"
+  }
+]
