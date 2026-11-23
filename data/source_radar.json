@@ -2,6 +2,34 @@
   "entries": [
     {
       "promotion": "WWE",
+      "video_id": "okcImJFB8P4",
+      "title": "Best of Survivor Series Matches of the last decade: Full Match Marathon",
+      "published": "2026-11-23T01:19:48Z",
+      "url": "https://www.youtube.com/watch?v=okcImJFB8P4"
+    },
+    {
+      "promotion": "AEW",
+      "video_id": "-XU1SOK9fAs",
+      "title": "ilja dragunov brings the FURY!!",
+      "published": "2026-11-23T00:00:34Z",
+      "url": "https://www.youtube.com/watch?v=-XU1SOK9fAs"
+    },
+    {
+      "promotion": "WWE",
+      "video_id": "YWaQI5oMQU4",
+      "title": "Charlotte Flair knows how to chop and SLAP! 🙌",
+      "published": "2026-11-22T22:30:03Z",
+      "url": "https://www.youtube.com/watch?v=YWaQI5oMQU4"
+    },
+    {
+      "promotion": "WWE",
+      "video_id": "kfuKN5Vl0ks",
+      "title": "Rey Fenix has been on quite a run these last few months",
+      "published": "2026-11-22T22:00:27Z",
+      "url": "https://www.youtube.com/watch?v=kfuKN5Vl0ks"
+    },
+    {
+      "promotion": "WWE",
       "video_id": "K0XWL6wF5BI",
       "title": "The Rock is honored with “This Is Your Life”: 30 Years of The Rock",
       "published": "2026-11-22T19:00:38Z",
@@ -50,27 +78,6 @@
       "url": "https://www.youtube.com/watch?v=S0FeNVAUS-Q"
     },
     {
-      "promotion": "WWE",
-      "video_id": "D23xyX9ldFM",
-      "title": "Director’s Cut of the 2023 Men’s WarGames Match: Survivor Series",
-      "published": "2026-11-22T15:00:18Z",
-      "url": "https://www.youtube.com/watch?v=D23xyX9ldFM"
-    },
-    {
-      "promotion": "WWE",
-      "video_id": "HEWm8UOcNkc",
-      "title": "We still ❤️Hacksaw",
-      "published": "2026-11-22T14:30:11Z",
-      "url": "https://www.youtube.com/watch?v=HEWm8UOcNkc"
-    },
-    {
-      "promotion": "WWE",
-      "video_id": "iCxj1xw4Y7g",
-      "title": "FULL MATCH: Stephanie Vaquer vs. Nikki Bella | Women’s World Title Match: Survivor Series 2025",
-      "published": "2026-11-22T14:00:20Z",
-      "url": "https://www.youtube.com/watch?v=iCxj1xw4Y7g"
-    },
-    {
       "promotion": "AEW",
       "video_id": "b_Hgm9baqmw",
       "title": "mixed nuts mayhem was a wild time! 🥜",
@@ -90,13 +97,6 @@
       "title": "Switchblade Jay White vs Ricochet in Continental Classic Blue League Match | AEW Collision, 11/21/26",
       "published": "2026-11-22T04:00:03Z",
       "url": "https://www.youtube.com/watch?v=ckS640l7HTM"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "-JqOxcP4zjQ",
-      "title": "MIXED TAG TEAM ACTION! Death Riders vs Shane Taylor Promotions | AEW Collision, 11/21/26",
-      "published": "2026-11-22T03:55:13Z",
-      "url": "https://www.youtube.com/watch?v=-JqOxcP4zjQ"
     }
   ]
 }
