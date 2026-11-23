@@ -21,3 +21,5 @@ if "function featureCoverFor" not in html:
     html=html.replace('uniquePhoto:!!newFeatures.find(x=>x.title===story.title)','uniquePhoto:false')
 p.write_text(html)
 print("Updated",len(items),"article covers and homepage art")
+
+# Trigger artwork integration after workflow registration.
