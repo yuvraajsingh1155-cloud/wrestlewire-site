@@ -447,7 +447,7 @@ a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weigh
       const box=document.createElement("article");box.className="roster-card";
       const btn=document.createElement("a");btn.href="/wrestlers/"+w.n.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+"/";btn.setAttribute("aria-label","Read wrestler profile: "+w.n);
       const photo=document.createElement("div");photo.className="roster-photo";
-      if(w.photo){const img=document.createElement("img");img.src=w.photo;img.alt="Reference image associated with "+w.n+"; verify licensing and identity at source";img.loading="lazy";img.onerror=()=>{img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(portraitArtwork(w.n,w.p));img.alt="Original illustrated name card for "+w.n;};photo.append(img);}
+      if(w.photo){const img=document.createElement("img");img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(portraitArtwork(w.n,w.p));img.alt="Original illustrated name card for "+w.n+"; not a photograph";img.loading="lazy";photo.append(img);}
       else{const img=document.createElement("img");img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(portraitArtwork(w.n,w.p));img.alt="Original illustrated name card for "+w.n+"; not a photograph";img.loading="lazy";photo.append(img);}
       const info=document.createElement("div");info.className="roster-name";
       const n=document.createElement("strong");n.textContent=w.n;
