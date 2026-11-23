@@ -11,6 +11,9 @@ for item in items:
     html=re.sub(r'<figure class="hero" id="photo">.*?</figure>',lambda _: '<figure class="hero" id="photo">'+img+'</figure>',html,count=1,flags=re.S)
     html=re.sub(r'<div class="credit" id="credit">.*?</div>', '<div class="credit" id="credit">Original WrestleWire editorial illustration — not a real event photograph.</div>',html,count=1,flags=re.S)
     html=re.sub(r'<script>.*?</script>', "", html, flags=re.S)
+    if 'property="og:image"' not in html:
+        meta='<meta property="og:image" content="https://wrestlewire-site.yuvraajsingh1155.workers.dev/assets/features/'+slug+'.svg"><meta property="og:image:alt" content="Original WrestleWire editorial illustration"><meta name="twitter:card" content="summary_large_image">'
+        html=html.replace('</head>',meta+'</head>',1)
     p.write_text(html)
 p=root/"index.html"
 html=p.read_text()

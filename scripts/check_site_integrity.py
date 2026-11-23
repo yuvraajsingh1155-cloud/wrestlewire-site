@@ -50,6 +50,7 @@ for p in article_dirs: check_page(p.relative_to(ROOT), "article")
 for p in article_dirs:
     key = p.parent.name
     if not (ROOT / "assets/features" / (key + ".svg")).exists(): fail(f"Missing cover for article: {key}")
+    elif ("/assets/features/" + key + ".svg") not in p.read_text(encoding="utf-8"): fail(f"Article does not embed cover: {key}")
 tree = ET.parse(ROOT / "sitemap.xml")
 urls = [x.text for x in tree.findall(".//{*}loc")]
 if len(urls) != len(set(urls)): fail("Duplicate sitemap URLs")
