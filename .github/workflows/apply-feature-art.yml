@@ -1,0 +1,27 @@
+name: Attach 100 original article illustrations
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/features/**'
+      - 'scripts/apply_feature_art.py'
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/apply_feature_art.py
+      - name: Commit article artwork
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html articles/
+          git diff --cached --quiet || (git commit -m "Apply 100 distinct original editorial illustrations to live pages" && git push)
