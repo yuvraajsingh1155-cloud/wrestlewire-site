@@ -205,9 +205,9 @@ a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weigh
   </aside></div>
 </section>
 <section class="roster-feature section-anchor" id="roster">
-  <div class="eyebrow">✦ THE LOCKER ROOM — WRESTLER ENCYCLOPEDIA STARTER</div>
+  <div class="eyebrow">✦ THE LOCKER ROOM — A–Z WRESTLING ENCYCLOPEDIA</div>
   <h2>WRESTLER <span>INDEX.</span></h2>
-  <p class="roster-description">Search WWE, AEW and wrestling legends. Every profile opens an interactive career summary with notable matchups and transparent earnings-data limitations. This index is growing; it is not a complete world registry.</p>
+  <p class="roster-description">Search WWE, AEW and wrestling legends. Every profile opens an interactive career summary with notable matchups and transparent earnings-data limitations. Browse hundreds of WWE, AEW and legendary wrestling names A–Z. Verified Wikimedia photos are loaded when available; more profiles are added continuously.</p>
   <div class="roster-controls">
     <input id="rosterSearch" type="search" placeholder="Search wrestler, promotion, rivals, style..." aria-label="Search wrestler profiles">
     <select id="rosterFilter" aria-label="Filter wrestler directory"><option value="all">All wrestlers</option><option value="WWE">WWE associated</option><option value="AEW">AEW associated</option><option value="Legend">Legends & retirees</option></select>
@@ -709,28 +709,68 @@ a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weigh
 
   const wrestlerDirectory=[{"n":"Roman Reigns","p":"WWE","s":"Modern main-event heavyweight","history":"WWE / The Shield / Bloodline-era storytelling","r":"Cody Rhodes, Seth Rollins, Brock Lesnar","income":"Individual salary is not verified as public fact."},{"n":"Cody Rhodes","p":"WWE","s":"Multi-promotion main-event star","history":"WWE, AEW, NJPW and independent wrestling","r":"Roman Reigns, Seth Rollins, Brock Lesnar","income":"Contract and merchandise income details are not fully public."},{"n":"Seth Rollins","p":"WWE","s":"Versatile technical and aerial performer","history":"WWE, Ring of Honor (as Tyler Black) and independent wrestling","r":"Roman Reigns, CM Punk, Cody Rhodes","income":"Exact lifetime earnings cannot be verified."},{"n":"Rhea Ripley","p":"WWE","s":"Powerful modern women’s division star","history":"WWE, NXT and earlier Australian independent wrestling","r":"Becky Lynch, Charlotte Flair, Liv Morgan","income":"Exact salary is not reliably public."},{"n":"Rey Mysterio","p":"WWE Legend","s":"Lucha libre and high-flying icon","history":"Mexico, ECW, WCW and WWE","r":"Eddie Guerrero, CM Punk, Kurt Angle","income":"Public salary estimates vary and are not treated as facts.","photo":"https://commons.wikimedia.org/wiki/Special:FilePath/Rey_Mysterio_Headbutt.jpg?width=750"},{"n":"CM Punk","p":"WWE","s":"Promo-driven veteran and technical wrestler","history":"Ring of Honor, WWE and AEW","r":"John Cena, Seth Rollins, Drew McIntyre","income":"Private contract amounts not verified."},{"n":"Kenny Omega","p":"AEW","s":"International main-event technician","history":"NJPW, DDT, AEW and independent wrestling","r":"Kazuchika Okada, Jon Moxley, Will Ospreay","income":"Exact career earnings unavailable."},{"n":"Jon Moxley","p":"AEW","s":"Hard-hitting brawler","history":"WWE (as Dean Ambrose), AEW, NJPW and independent wrestling","r":"Kenny Omega, Bryan Danielson, Hangman Page","income":"Personal earnings are not audited public figures."},{"n":"Hangman Adam Page","p":"AEW","s":"Athletic modern main-eventer","history":"Ring of Honor, NJPW and AEW","r":"Kenny Omega, Jon Moxley, Swerve Strickland","income":"Exact pay is private.","photo":"https://commons.wikimedia.org/wiki/Special:FilePath/Adam_Page_Moonsault_part_3.jpg?width=750"},{"n":"Will Ospreay","p":"AEW","s":"High-flying international standout","history":"UK independent wrestling, NJPW, AEW","r":"Kenny Omega, Kazuchika Okada, Ricochet","income":"Career revenue has no authoritative public total."},{"n":"Ricochet","p":"AEW","s":"Explosive aerial specialist","history":"Independent wrestling, NJPW, WWE and AEW","r":"Will Ospreay, Josh Alexander, Rey Mysterio","income":"Private salary details unverified.","photo":"https://commons.wikimedia.org/wiki/Special:FilePath/Ricochet_over_the_ropes.jpg?width=1200"},{"n":"Mercedes Moné","p":"AEW","s":"Globally known women’s wrestler","history":"WWE (as Sasha Banks), NJPW/STARDOM appearances, AEW","r":"Bayley, Bianca Belair, Willow Nightingale","income":"Exact career income is not publicly verified."},{"n":"Sting","p":"AEW Legend","s":"Retired icon with decades of influence","history":"NWA/WCW, TNA, WWE and AEW","r":"Ric Flair, Hulk Hogan, Darby Allin (tag partner)","income":"Estimates of lifetime earnings are not official."},{"n":"The Undertaker","p":"WWE Legend","s":"Retired character and WrestleMania legend","history":"WCW briefly, WWE for most of career","r":"Shawn Michaels, Kane, Triple H","income":"No verified lifetime earnings figure."},{"n":"John Cena","p":"WWE Legend","s":"Mainstream crossover star","history":"WWE and entertainment media","r":"Randy Orton, Edge, CM Punk","income":"Film earnings and wrestling contracts are different private/public categories."},{"n":"Becky Lynch","p":"WWE","s":"Major modern women's division star","history":"Independent wrestling and WWE","r":"Charlotte Flair, Bianca Belair, Rhea Ripley","income":"Exact career income not publicly established."}];
   const extraArticles=[{"cat":"WWE","art":"flyer","palette":"red","tag":"WWE / OFFICIAL UPDATE","title":"WWE Shares Its Survivor Series Top-10 Special Edition","desc":"Official WWE upload dated Nov. 22, 2026 — a source-linked update, not a new match result.","source":"WWE verified video feed","url":"https://www.youtube.com/watch?v=uXETwSrKfxs","body":["The official WWE channel listed a Survivor Series Top 10 special edition upload on November 22, 2026. The source video is a retrospective rather than a standalone confirmation of future bookings.","Use the official source to see exactly what was published."]},{"cat":"AEW","art":"flyer","palette":"gold","tag":"AEW / OFFICIAL UPDATE","title":"AEW Highlights Jay White vs Ricochet on Collision","desc":"Official feed lists an AEW Collision Continental Classic matchup on Nov. 21, 2026.","source":"AEW verified video feed","url":"https://www.youtube.com/watch?v=SmBswL7tXhg","body":["AEW’s official YouTube feed lists a Jay White vs Ricochet matchup from Collision in November 2026. The video title supports the matchup, not unsupported claims about the result.","The source brief explains the difference."]}];
+  // Extend the curated roster from a separate, maintainable directory file.
+  const expandedRosterUrl="/data/wrestlers-expanded.json";
   const rosterEl=document.getElementById("rosterGrid");
   const rosterFilter=document.getElementById("rosterFilter");
   const rosterSearch=document.getElementById("rosterSearch");
   const rosterEmpty=document.getElementById("rosterEmpty");
   let rosterQuery="";
+  let rosterPage=1;
+  const rosterPageSize=48;
+  const rosterCount=document.createElement("p");rosterCount.className="roster-description";rosterCount.id="rosterCount";rosterEl.before(rosterCount);
+  const loadMore=document.createElement("button");loadMore.type="button";loadMore.className="cta";loadMore.textContent="LOAD MORE WRESTLERS ↓";rosterEl.after(loadMore);
+  loadMore.addEventListener("click",()=>{rosterPage++;renderRoster()});
+  // Wikipedia page images are queried by exact article title, never a generic wrestling stock photo.
+  // A missing image remains a labeled placeholder rather than displaying the wrong person's face.
+  const wikiPhotoCache=new Map();
+  const wikiAlias={"CM Punk":"CM Punk","The Great Khali":"The Great Khali","MJF (wrestler)":"Maxwell Jacob Friedman","PAC (wrestler)":"Pac (wrestler)","Kane (wrestler)":"Kane (wrestler)","Edge (wrestler)":"Adam Copeland","FTR (professional wrestling)":"FTR (professional wrestling)"};
+  async function hydrateWrestlerPhotos(){
+    const imgs=[...rosterEl.querySelectorAll("[data-wiki-title]")];
+    const missing=imgs.map(el=>el.dataset.wikiTitle).filter((x,i,a)=>a.indexOf(x)===i&&!wikiPhotoCache.has(x));
+    for(let i=0;i<missing.length;i+=25){
+      const batch=missing.slice(i,i+25);
+      try{
+        const api="https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&redirects=1&prop=pageimages%7Cinfo&piprop=thumbnail&pithumbsize=420&titles="+encodeURIComponent(batch.join("|"));
+        const response=await fetch(api);if(!response.ok)throw Error("Wikipedia unavailable");
+        const data=await response.json();const redirects=new Map((data.query?.redirects||[]).map(x=>[x.from,x.to]));
+        const pages=Object.values(data.query?.pages||{});
+        for(const name of batch){
+          const title=redirects.get(name)||name;
+          const page=pages.find(p=>p.title===title);
+          wikiPhotoCache.set(name,page?.thumbnail?.source?{src:page.thumbnail.source,url:"https://en.wikipedia.org/wiki/"+encodeURIComponent(page.title.replaceAll(" ","_"))}:null);
+        }
+      }catch(e){batch.forEach(name=>wikiPhotoCache.set(name,null));}
+    }
+    imgs.forEach(el=>{const p=wikiPhotoCache.get(el.dataset.wikiTitle);if(!p||!el.isConnected)return;const image=document.createElement("img");image.src=p.src;image.alt="Photograph associated with Wikipedia article: "+el.dataset.wikiTitle;image.loading="lazy";image.referrerPolicy="no-referrer";image.onerror=()=>image.remove();el.replaceChildren(image);el.title="Image source: "+p.url;});
+  }
+  fetch(expandedRosterUrl).then(r=>{if(!r.ok)throw Error("Directory unavailable");return r.json()}).then(list=>{
+    const seen=new Set(wrestlerDirectory.map(w=>w.n.toLowerCase()));
+    list.forEach(w=>{if(!w.n||seen.has(w.n.toLowerCase()))return;seen.add(w.n.toLowerCase());wrestlerDirectory.push({n:w.n,p:w.p,s:"Professional wrestler • career profile expanding",history:"See linked encyclopedia sources for career history",r:"Match and rivalry history under review",income:"Private contract earnings not verified."});});
+    renderRoster();
+  }).catch(()=>{rosterCount.textContent="Additional directory entries temporarily unavailable."});
+
   function renderRoster(){
     const group=rosterFilter.value;
     const found=wrestlerDirectory.filter(w=>(group==="all"||w.p.includes(group))&&[w.n,w.p,w.s,w.history,w.r].join(" ").toLowerCase().includes(rosterQuery));
+    found.sort((a,b)=>a.n.localeCompare(b.n,"en",{sensitivity:"base"}));
     rosterEl.replaceChildren();
     rosterEmpty.style.display=found.length?"none":"block";
-    found.forEach(w=>{
+    rosterCount.textContent=found.length+" wrestlers in directory • showing "+Math.min(found.length,rosterPage*rosterPageSize)+" • A–Z";
+    loadMore.style.display=found.length>rosterPage*rosterPageSize?"inline-block":"none";
+    found.slice(0,rosterPage*rosterPageSize).forEach(w=>{
       const box=document.createElement("article");box.className="roster-card";
       const btn=document.createElement("a");btn.href="/wrestlers/"+w.n.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+"/";btn.setAttribute("aria-label","Read wrestler profile: "+w.n);
       const photo=document.createElement("div");photo.className="roster-photo";
       if(w.photo){const img=document.createElement("img");img.src=w.photo;img.alt="Licensed photograph of "+w.n;img.loading="lazy";photo.append(img);}
-      else{const initials=document.createElement("span");initials.className="roster-monogram";initials.textContent=w.n.split(" ").slice(0,2).map(x=>x[0]).join("");photo.append(initials);}
+      else{const initials=document.createElement("span");initials.className="roster-monogram";initials.textContent=w.n.split(" ").slice(0,2).map(x=>x[0]).join("");photo.append(initials);photo.dataset.wikiTitle=wikiAlias[w.n]||w.n;}
       const info=document.createElement("div");info.className="roster-name";
       const n=document.createElement("strong");n.textContent=w.n;
       const p=document.createElement("span");p.textContent=w.p;
       const d=document.createElement("p");d.textContent=w.s;
       info.append(n,p,d);btn.append(photo,info);box.append(btn);rosterEl.append(box);
     });
+    hydrateWrestlerPhotos();
   }
   function openWrestler(w){
     article.replaceChildren();
@@ -742,8 +782,8 @@ a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weigh
     [["Career promotions",w.history],["Notable opponents / rivalries",w.r],["Income disclosure",w.income],["Coverage status","Starter profile. This is not a complete match-by-match history; affiliations may change."]].forEach(([label,value])=>{const row=document.createElement("div");row.className="stat";const strong=document.createElement("strong");strong.textContent=label+": ";row.append(strong,document.createTextNode(value));el.append(row);});
     article.append(el);reader.showModal();
   }
-  rosterSearch.addEventListener("input",e=>{rosterQuery=e.target.value.trim().toLowerCase();renderRoster();});
-  rosterFilter.addEventListener("change",renderRoster);
+  rosterSearch.addEventListener("input",e=>{rosterQuery=e.target.value.trim().toLowerCase();rosterPage=1;renderRoster();});
+  rosterFilter.addEventListener("change",()=>{rosterPage=1;renderRoster()});
   document.getElementById("goRoster").addEventListener("click",()=>document.getElementById("roster").scrollIntoView({behavior:"smooth"}));
   renderRoster();
 
