@@ -10,8 +10,7 @@ for item in items:
     img='<img src="/assets/features/'+slug+'.svg" alt="Original editorial artwork illustrating '+item["title"].replace('"',"&quot;")+'" loading="eager" width="1200" height="675">'
     html=re.sub(r'<figure class="hero" id="photo">.*?</figure>',lambda _: '<figure class="hero" id="photo">'+img+'</figure>',html,count=1,flags=re.S)
     html=re.sub(r'<div class="credit" id="credit">.*?</div>', '<div class="credit" id="credit">Original WrestleWire editorial illustration — not a real event photograph.</div>',html,count=1,flags=re.S)
-    html=re.sub(r'<script>\\(async\\(\\)=>\\{const q=.*?</script>', "", html, flags=re.S)
-    html=re.sub(r'<script>document\\.getElementById\\("photo"\\)\\.innerHTML=.*?</script>', "", html, flags=re.S)
+    html=re.sub(r'<script>.*?</script>', "", html, flags=re.S)
     p.write_text(html)
 p=root/"index.html"
 html=p.read_text()
