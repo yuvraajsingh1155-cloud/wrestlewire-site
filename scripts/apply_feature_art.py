@@ -6,6 +6,8 @@ for item in items:
     p=root/"articles"/slug/"index.html"
     if not p.exists(): continue
     html=p.read_text()
+    # Remove the older asynchronous Commons search: it could overwrite the correct local cover with unrelated imagery.
+    html=re.sub(r'<script>\(async\(\)=>\{const q=.*?</script>', "", html, flags=re.S)
     tag='<script>document.getElementById("photo").innerHTML=\'<img src="/assets/features/'+slug+'.svg" alt="Original wrestling editorial illustration, not a real event photograph" loading="eager">\';document.getElementById("credit").textContent="Original WrestleWire editorial illustration. Not a real event photograph.";</script>'
     if "Original WrestleWire editorial illustration. Not a real event photograph." not in html:
         html=html.replace("</body></html>",tag+"</body></html>")
