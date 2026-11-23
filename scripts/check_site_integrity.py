@@ -60,7 +60,7 @@ for p in article_dirs + list((ROOT / "wrestlers").glob("*/index.html")):
 for url in urls:
     if not url.startswith(BASE + "/"): fail(f"Unexpected sitemap host: {url}"); continue
     rel = url.removeprefix(BASE + "/").strip("/")
-    if not (ROOT / rel / "index.html").exists() and not (ROOT / rel).is_file(): fail(f"Dead sitemap target: {url}")
+    if not (ROOT / rel / "index.html").exists() and not (ROOT / rel).is_file() and not (rel == "" and (ROOT / "index.html").is_file()): fail(f"Dead sitemap target: {url}")
 print(f"Checked {len(roster)} wrestlers, {len(article_dirs)} articles, {len(features)} feature covers, {len(urls)} sitemap URLs")
 if errors:
     for err in errors[:100]: print("ERROR:", err)
