@@ -2,6 +2,20 @@
   "entries": [
     {
       "promotion": "WWE",
+      "video_id": "FyxZ97Lts6U",
+      "title": "Liv Morgan vs. Becky Lynch | Road to Survivor Series 2026: WWE Playlist",
+      "published": "2026-11-23T13:00:06Z",
+      "url": "https://www.youtube.com/watch?v=FyxZ97Lts6U"
+    },
+    {
+      "promotion": "AEW",
+      "video_id": "D0lhTTw4wsE",
+      "title": "EXCLUSIVE: Brody King, Ciampa, The Jet, Ricochet & Jay White react to Continental Classic matchups",
+      "published": "2026-11-23T13:00:00Z",
+      "url": "https://www.youtube.com/watch?v=D0lhTTw4wsE"
+    },
+    {
+      "promotion": "WWE",
       "video_id": "okcImJFB8P4",
       "title": "Best of Survivor Series Matches of the last decade: Full Match Marathon",
       "published": "2026-11-23T01:19:48Z",
@@ -64,13 +78,6 @@
       "url": "https://www.youtube.com/watch?v=gi34O__f7Y8"
     },
     {
-      "promotion": "WWE",
-      "video_id": "Bn2jroQKquk",
-      "title": "The Rock’s most electrifying People’s Elbows: 30 Years of The Rock",
-      "published": "2026-11-22T17:00:13Z",
-      "url": "https://www.youtube.com/watch?v=Bn2jroQKquk"
-    },
-    {
       "promotion": "AEW",
       "video_id": "S0FeNVAUS-Q",
       "title": "Tag Team ARRIVALS! | AEW Top 10",
@@ -90,13 +97,6 @@
       "title": "Switchblade Jay White vs Ricochet in Continental Classic Blue League Match | AEW Collision, 11/21/26",
       "published": "2026-11-22T04:00:20Z",
       "url": "https://www.youtube.com/watch?v=SmBswL7tXhg"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "ckS640l7HTM",
-      "title": "Switchblade Jay White vs Ricochet in Continental Classic Blue League Match | AEW Collision, 11/21/26",
-      "published": "2026-11-22T04:00:03Z",
-      "url": "https://www.youtube.com/watch?v=ckS640l7HTM"
     }
   ]
 }
