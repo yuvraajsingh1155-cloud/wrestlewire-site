@@ -6,11 +6,12 @@ for item in items:
     p=root/"articles"/slug/"index.html"
     if not p.exists(): continue
     html=p.read_text()
-    # Remove the older asynchronous Commons search: it could overwrite the correct local cover with unrelated imagery.
-    html=re.sub(r'<script>\(async\(\)=>\{const q=.*?</script>', "", html, flags=re.S)
-    tag='<script>document.getElementById("photo").innerHTML=\'<img src="/assets/features/'+slug+'.svg" alt="Original wrestling editorial illustration, not a real event photograph" loading="eager">\';document.getElementById("credit").textContent="Original WrestleWire editorial illustration. Not a real event photograph.";</script>'
-    if "Original WrestleWire editorial illustration. Not a real event photograph." not in html:
-        html=html.replace("</body></html>",tag+"</body></html>")
+    # Put the real image element in the HTML itself, so it is visible even if JS fails.
+    img='<img src="/assets/features/'+slug+'.svg" alt="Original editorial artwork illustrating '+item["title"].replace('"',"&quot;")+'" loading="eager" width="1200" height="675">'
+    html=re.sub(r'<figure class="hero" id="photo">.*?</figure>',lambda _: '<figure class="hero" id="photo">'+img+'</figure>',html,count=1,flags=re.S)
+    html=re.sub(r'<div class="credit" id="credit">.*?</div>', '<div class="credit" id="credit">Original WrestleWire editorial illustration — not a real event photograph.</div>',html,count=1,flags=re.S)
+    html=re.sub(r'<script>\\(async\\(\\)=>\\{const q=.*?</script>', "", html, flags=re.S)
+    html=re.sub(r'<script>document\\.getElementById\\("photo"\\)\\.innerHTML=.*?</script>', "", html, flags=re.S)
     p.write_text(html)
 p=root/"index.html"
 html=p.read_text()
