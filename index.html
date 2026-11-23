@@ -514,7 +514,7 @@ a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weigh
     rail.addEventListener("mouseenter",()=>paused=true);rail.addEventListener("mouseleave",()=>paused=false);
     rail.addEventListener("focusin",()=>paused=true);rail.addEventListener("focusout",()=>paused=false);
     document.addEventListener("visibilitychange",()=>{paused=document.hidden;});
-    if(!reduce)window.setInterval(()=>{if(!paused)go(current+1)},1000);
+    if(!reduce)window.setInterval(()=>{if(!paused)go(current+1)},2000);
     update();
   })();
 })();
@@ -534,7 +534,7 @@ a.radar-card .radar-open{margin-top:auto;color:#ff8b9c;font-size:11px;font-weigh
  radar.addEventListener("focusin",()=>paused=true);radar.addEventListener("focusout",()=>paused=false);
  radar.addEventListener("touchstart",()=>paused=true,{passive:true});radar.addEventListener("touchend",()=>{paused=false},{passive:true});
  document.addEventListener("visibilitychange",()=>paused=document.hidden);
- show(0);setInterval(()=>{if(!paused)show(index+1)},1000);
+ show(0);setInterval(()=>{if(!paused)show(index+1)},2000);
 })();
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"07d17fc48e50449187f9739232103de4"}'></script>
