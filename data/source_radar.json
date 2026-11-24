@@ -1,6 +1,27 @@
 {
   "entries": [
     {
+      "promotion": "WWE",
+      "video_id": "Znxeo91RQFc",
+      "title": "What is Seth Rollins motivation for joining Team USA for this Saturday’s #SurvivorSeries? 🤔 #WWENow",
+      "published": "2026-11-24T16:13:04Z",
+      "url": "https://www.youtube.com/watch?v=Znxeo91RQFc"
+    },
+    {
+      "promotion": "AEW",
+      "video_id": "S6c1k2HPcFY",
+      "title": "The CHAOTIC history between Hangman Page & Swerve Strickland! | AEW Timelines",
+      "published": "2026-11-24T15:31:13Z",
+      "url": "https://www.youtube.com/watch?v=S6c1k2HPcFY"
+    },
+    {
+      "promotion": "WWE",
+      "video_id": "gskIIlQ2ipE",
+      "title": "Survivor Series: WarGames Cold Open | Narrated by The Undertaker",
+      "published": "2026-11-24T14:15:30Z",
+      "url": "https://www.youtube.com/watch?v=gskIIlQ2ipE"
+    },
+    {
       "promotion": "AEW",
       "video_id": "aVHJk8kHNWY",
       "title": "Continental Classic - Week 1 Recap, Garcia Update & Week 2 Preview | All Elite Wrestling",
@@ -50,20 +71,6 @@
       "url": "https://www.youtube.com/watch?v=QMGCJm7Hmsk"
     },
     {
-      "promotion": "WWE",
-      "video_id": "C8L5dxJ1a-w",
-      "title": "Oba Femi vows to end The Vision: Raw highlights, Nov. 23, 2026",
-      "published": "2026-11-24T01:55:06Z",
-      "url": "https://www.youtube.com/watch?v=C8L5dxJ1a-w"
-    },
-    {
-      "promotion": "WWE",
-      "video_id": "lrjd81Pfy3w",
-      "title": "Lyra Valkyria talks trash to IYO SKY, Sol Ruca takes advantage: Raw highlights, Nov. 23, 2026",
-      "published": "2026-11-24T01:50:35Z",
-      "url": "https://www.youtube.com/watch?v=lrjd81Pfy3w"
-    },
-    {
       "promotion": "AEW",
       "video_id": "D0lhTTw4wsE",
       "title": "EXCLUSIVE: Brody King, Ciampa, The Jet, Ricochet & Jay White react to Continental Classic matchups",
@@ -90,13 +97,6 @@
       "title": "Tag Team ARRIVALS! | AEW Top 10",
       "published": "2026-11-22T16:00:12Z",
       "url": "https://www.youtube.com/watch?v=S0FeNVAUS-Q"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "b_Hgm9baqmw",
-      "title": "mixed nuts mayhem was a wild time! 🥜",
-      "published": "2026-11-22T12:00:34Z",
-      "url": "https://www.youtube.com/watch?v=b_Hgm9baqmw"
     }
   ]
 }
