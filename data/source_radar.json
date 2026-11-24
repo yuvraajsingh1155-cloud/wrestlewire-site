@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "promotion": "AEW",
+      "video_id": "aVHJk8kHNWY",
+      "title": "Continental Classic - Week 1 Recap, Garcia Update & Week 2 Preview | All Elite Wrestling",
+      "published": "2026-11-24T04:32:12Z",
+      "url": "https://www.youtube.com/watch?v=aVHJk8kHNWY"
+    },
+    {
+      "promotion": "WWE",
+      "video_id": "hNH4LbpQnHI",
+      "title": "Cody Rhodes SHOCKS CM Punk with Seth Rollins Team USA selection | Raw Recap: WWE Now",
+      "published": "2026-11-24T04:14:59Z",
+      "url": "https://www.youtube.com/watch?v=hNH4LbpQnHI"
+    },
+    {
       "promotion": "WWE",
       "video_id": "8kkG3wSQVRA",
       "title": "The Rock vs. John Cena | Once in a Lifetime: 30 Years of The Rock",
@@ -50,13 +64,6 @@
       "url": "https://www.youtube.com/watch?v=lrjd81Pfy3w"
     },
     {
-      "promotion": "WWE",
-      "video_id": "ElUtC7e8gIA",
-      "title": "Tensions rise between CM Punk, Cody Rhodes and Seth Rollins: Raw highlights, Nov. 23, 2026",
-      "published": "2026-11-24T01:45:12Z",
-      "url": "https://www.youtube.com/watch?v=ElUtC7e8gIA"
-    },
-    {
       "promotion": "AEW",
       "video_id": "D0lhTTw4wsE",
       "title": "EXCLUSIVE: Brody King, Ciampa, The Jet, Ricochet & Jay White react to Continental Classic matchups",
@@ -90,13 +97,6 @@
       "title": "mixed nuts mayhem was a wild time! 🥜",
       "published": "2026-11-22T12:00:34Z",
       "url": "https://www.youtube.com/watch?v=b_Hgm9baqmw"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "SmBswL7tXhg",
-      "title": "Switchblade Jay White vs Ricochet in Continental Classic Blue League Match | AEW Collision, 11/21/26",
-      "published": "2026-11-22T04:00:20Z",
-      "url": "https://www.youtube.com/watch?v=SmBswL7tXhg"
     }
   ]
 }
