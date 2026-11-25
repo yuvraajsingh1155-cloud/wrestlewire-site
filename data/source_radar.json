@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "promotion": "AEW",
+      "video_id": "SGPXXGa3VOI",
+      "title": "Jon Moxley's INSANE 2025 Continental Classic Run",
+      "published": "2026-11-25T04:51:24Z",
+      "url": "https://www.youtube.com/watch?v=SGPXXGa3VOI"
+    },
+    {
       "promotion": "WWE",
       "video_id": "9panP16cnVA",
       "title": "FULL MATCH: Zaria vs. Izzi Dame | NXT Women’s North American Title: NXT highlights, Nov 24, 2026",
@@ -90,13 +97,6 @@
       "title": "EXCLUSIVE: Brody King, Ciampa, The Jet, Ricochet & Jay White react to Continental Classic matchups",
       "published": "2026-11-23T13:00:00Z",
       "url": "https://www.youtube.com/watch?v=D0lhTTw4wsE"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "-XU1SOK9fAs",
-      "title": "ilja dragunov brings the FURY!!",
-      "published": "2026-11-23T00:00:34Z",
-      "url": "https://www.youtube.com/watch?v=-XU1SOK9fAs"
     }
   ]
 }
