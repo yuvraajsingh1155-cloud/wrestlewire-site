@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "promotion": "WWE",
+      "video_id": "PCQvEtZcj4E",
+      "title": "Team USA vs. Team Mexico | Road to Survivor Series 2026: WWE Playlist",
+      "published": "2026-11-25T13:00:11Z",
+      "url": "https://www.youtube.com/watch?v=PCQvEtZcj4E"
+    },
+    {
+      "promotion": "AEW",
+      "video_id": "hfM7xUxaZ6o",
+      "title": "FULL MATCH: Swerve Strickland vs Jay Lethal | AEW Dynamite, 11/22/23",
+      "published": "2026-11-25T11:00:28Z",
+      "url": "https://www.youtube.com/watch?v=hfM7xUxaZ6o"
+    },
+    {
       "promotion": "AEW",
       "video_id": "SGPXXGa3VOI",
       "title": "Jon Moxley's INSANE 2025 Continental Classic Run",
@@ -64,13 +78,6 @@
       "url": "https://www.youtube.com/watch?v=jTymtTXjYmU"
     },
     {
-      "promotion": "WWE",
-      "video_id": "8d41T1qh6cA",
-      "title": "DarkState just had to get involved 😒 #WWENXT",
-      "published": "2026-11-25T02:58:25Z",
-      "url": "https://www.youtube.com/watch?v=8d41T1qh6cA"
-    },
-    {
       "promotion": "AEW",
       "video_id": "pjE1dnWA0JM",
       "title": "Ilja Dragunov is ALL ELITE! | Close Up with Renee Paquette",
@@ -90,13 +97,6 @@
       "title": "Continental Classic - Week 1 Recap, Garcia Update & Week 2 Preview | All Elite Wrestling",
       "published": "2026-11-24T04:32:12Z",
       "url": "https://www.youtube.com/watch?v=aVHJk8kHNWY"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "D0lhTTw4wsE",
-      "title": "EXCLUSIVE: Brody King, Ciampa, The Jet, Ricochet & Jay White react to Continental Classic matchups",
-      "published": "2026-11-23T13:00:00Z",
-      "url": "https://www.youtube.com/watch?v=D0lhTTw4wsE"
     }
   ]
 }
