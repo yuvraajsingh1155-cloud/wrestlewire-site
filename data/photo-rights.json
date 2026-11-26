@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "last_verified_utc": "2026-11-26",
+  "notes": "Only registered, individually verified Wikimedia Commons photographs may be assigned. No unrelated person image or unverified license. Publication uses remote Wikimedia Special:FilePath thumbnails, locally optimized assets not generated.",
+  "photos": [
+    {
+      "id": "ricochet-aerial-2014",
+      "file": "Ricochet over the ropes.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ricochet_over_the_ropes.jpg?width=1200",
+      "file_page": "https://commons.wikimedia.org/wiki/File:Ricochet_over_the_ropes.jpg",
+      "author": "Tabercil",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commercial_reuse": true,
+      "modification_permitted": true,
+      "credit": "Ricochet over the ropes © Tabercil, CC BY-SA 3.0; CSS crop",
+      "date": "2014-11-06",
+      "subjects": [
+        "Ricochet",
+        "Josh Alexander"
+      ],
+      "event": "Alpha-1 Final Act 5",
+      "width": 4868,
+      "height": 3546,
+      "local_asset_path": null,
+      "cropped": true,
+      "verified": true
+    },
+    {
+      "id": "rey-punk-2011",
+      "file": "Rey Mysterio Headbutt.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rey_Mysterio_Headbutt.jpg?width=750",
+      "file_page": "https://commons.wikimedia.org/wiki/File:Rey_Mysterio_Headbutt.jpg",
+      "author": "Joe Loong",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "commercial_reuse": true,
+      "modification_permitted": true,
+      "credit": "Rey Mysterio against CM Punk © Joe Loong, CC BY-SA 2.0; CSS crop",
+      "date": "2011-06-19",
+      "subjects": [
+        "Rey Mysterio",
+        "CM Punk"
+      ],
+      "event": "WWE Capitol Punishment 2011",
+      "width": 432,
+      "height": 656,
+      "local_asset_path": null,
+      "cropped": true,
+      "verified": true
+    },
+    {
+      "id": "aew-page-2019",
+      "file": "Adam Page Moonsault part 3.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adam_Page_Moonsault_part_3.jpg?width=750",
+      "file_page": "https://commons.wikimedia.org/wiki/File:Adam_Page_Moonsault_part_3.jpg",
+      "author": "grenwail",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "commercial_reuse": true,
+      "modification_permitted": true,
+      "credit": "Hangman Adam Page moonsault © grenwail, CC BY 2.0; CSS crop",
+      "date": "2019",
+      "subjects": [
+        "Hangman Adam Page",
+        "Sammy Guevara"
+      ],
+      "event": "AEW 2019",
+      "width": null,
+      "height": null,
+      "local_asset_path": null,
+      "cropped": true,
+      "verified": true
+    },
+    {
+      "id": "great-khali-2011",
+      "file": "Greatkhali.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Greatkhali.jpg?width=900",
+      "file_page": "https://commons.wikimedia.org/wiki/File:Great_Khali.jpg",
+      "author": "Vaikoovery",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "commercial_reuse": true,
+      "modification_permitted": true,
+      "credit": "The Great Khali, Mumbai rally © Vaikoovery, CC BY 3.0; CSS crop",
+      "date": "2011-11-20",
+      "subjects": [
+        "The Great Khali"
+      ],
+      "event": "Mumbai peace rally (NOT wrestling match)",
+      "width": 3000,
+      "height": 4000,
+      "local_asset_path": null,
+      "cropped": true,
+      "verified": true
+    },
+    {
+      "id": "aew-all-in-2023",
+      "file": "AEW All In 2023.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AEW_All_In_2023.jpg?width=1100",
+      "file_page": "https://commons.wikimedia.org/wiki/File:AEW_All_In_2023.jpg",
+      "author": "McPhail",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_reuse": true,
+      "modification_permitted": true,
+      "credit": "AEW All In 2023 stadium photograph by McPhail, CC0",
+      "date": "2023-08-27",
+      "subjects": [],
+      "event": "AEW All In 2023, Wembley Stadium",
+      "width": 4080,
+      "height": 1836,
+      "local_asset_path": null,
+      "cropped": false,
+      "verified": true
+    }
+  ]
+}
