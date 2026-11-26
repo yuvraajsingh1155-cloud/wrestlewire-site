@@ -36,3 +36,10 @@ nav .navlinks a:hover{color:#e31837}
 @media(max-width:1120px){nav .navlinks{gap:8px}nav .navlinks a{font-size:11px}.launch{display:none}}
 @media(max-width:780px){nav .nav-inner{min-height:63px}.ww-home-toggle{display:inline-flex}.ww-home-theme{display:none}nav .navlinks{display:none}.ww-breaking{border-radius:0}.ww-dots button{min-width:30px;min-height:30px}}
 @media(prefers-reduced-motion:reduce){.ww-slide,.radar-card{animation:none!important;transition:none!important}}
+
+:root[data-ww-theme="light"] body{background:#f6f5f2!important;color:#15171c!important}
+:root[data-ww-theme="light"] body :is(.card,.roster-card,.auto-radar,.box,.policy-panel,.ww-breaking){background:#fff!important;color:#14161c!important;border-color:#d2cdd0!important}
+:root[data-ww-theme="light"] body :is(.card-body p,.roster-name p,.auto-radar .radar-intro,.section-title .note,.policy-panel p){color:#3a3a43!important}
+:root[data-ww-theme="light"] body :is(.card-body h3,.roster-name strong){color:#16171c!important}
+:root[data-ww-theme="light"] body .ww-home-drawer{background:#f8f6f4!important}
+:root[data-ww-theme="light"] body .ww-home-drawer a{color:#15151a!important}
