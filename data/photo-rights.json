@@ -113,6 +113,28 @@
       "local_asset_path": null,
       "cropped": false,
       "verified": true
+    },
+    {
+      "id": "sting-aew-2023",
+      "file": "Sting at All In 2023.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sting_at_All_In_2023.jpg?width=750",
+      "file_page": "https://commons.wikimedia.org/wiki/File:Sting_at_All_In_2023.jpg",
+      "author": "McPhail",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_reuse": true,
+      "modification_permitted": true,
+      "credit": "Sting at AEW All In 2023 by McPhail, CC0",
+      "date": "2023-08-27",
+      "subjects": [
+        "Sting"
+      ],
+      "event": "AEW All In 2023",
+      "width": 2048,
+      "height": 1536,
+      "local_asset_path": null,
+      "cropped": true,
+      "verified": true
     }
   ]
 }
