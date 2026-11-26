@@ -56,12 +56,12 @@ def license_photo(photo: dict, *, title: str, portrait: bool = False) -> str:
     desc = f"Archival photograph: {event}; {title}"
     inner = (
         f'<img class="ww-licensed-photo" loading="lazy" src="{escape(photo_url)}" alt="{escape(desc)}">'
-        f'<figcaption class="ww-license-caption">{escape(credit)}. '
+        f'<p class="ww-license-caption">{escape(credit)}. '
         f'<a href="{escape(photo["file_page"])}" target="_blank" rel="noopener noreferrer">Photo file &amp; credits</a> · '
         f'<a href="{escape(photo["license_url"])}" target="_blank" rel="noopener noreferrer">Reuse license</a>. '
         'Archive photo, not a current match image.</figcaption>'
     )
-    return f'<figure class="ww-license-figure">{inner}</figure>'
+    return f'<div class="ww-license-figure">{inner}</div>'
 
 def branded_cover(title: str, sublabel: str) -> str:
     return (
