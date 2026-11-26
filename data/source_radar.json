@@ -2,6 +2,27 @@
   "entries": [
     {
       "promotion": "AEW",
+      "video_id": "vKU2Radb3gA",
+      "title": "Paul Wight's BIGGEST Moments in AEW!",
+      "published": "2026-11-26T13:00:33Z",
+      "url": "https://www.youtube.com/watch?v=vKU2Radb3gA"
+    },
+    {
+      "promotion": "WWE",
+      "video_id": "gNZtm2tLxWY",
+      "title": "The Bloodline vs. The 946 | WarGames Match | Road to Survivor Series 2026: WWE Playlist",
+      "published": "2026-11-26T13:00:19Z",
+      "url": "https://www.youtube.com/watch?v=gNZtm2tLxWY"
+    },
+    {
+      "promotion": "AEW",
+      "video_id": "7jSF4RDihZM",
+      "title": "FULL MATCH: Orange Cassidy vs Claudio Castagnoli | AEW Dynamite, 11/26/25",
+      "published": "2026-11-26T12:00:09Z",
+      "url": "https://www.youtube.com/watch?v=7jSF4RDihZM"
+    },
+    {
+      "promotion": "AEW",
       "video_id": "b9jK3naKX5g",
       "title": "When does THE DEVIL get a HOLIDAY? MJF puts Ospreay on notice! | AEW Dynamite Thanksgiving Eve 2026",
       "published": "2026-11-26T04:45:38Z",
@@ -43,20 +64,6 @@
       "url": "https://www.youtube.com/watch?v=OiFXX0I5cJw"
     },
     {
-      "promotion": "AEW",
-      "video_id": "aJL918aTbYc",
-      "title": "Wrathlander vs Divine Dominion - AEW Women's Tag Team Titles | AEW Dynamite Thanksgiving Eve 2026",
-      "published": "2026-11-26T04:25:06Z",
-      "url": "https://www.youtube.com/watch?v=aJL918aTbYc"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "38uZ40FpUs4",
-      "title": "\"Switchblade\" Jay White vs Hangman Page in C2 Blue League Match | AEW Dynamite Thanksgiving Eve 2026",
-      "published": "2026-11-26T04:20:00Z",
-      "url": "https://www.youtube.com/watch?v=38uZ40FpUs4"
-    },
-    {
       "promotion": "WWE",
       "video_id": "2xUItZhKVUc",
       "title": "The Rock and Roman Reigns triumph at WrestleMania XL: 30 Years of The Rock",
@@ -90,13 +97,6 @@
       "title": "The Rock scores fastest win in WrestleMania history: 30 Years of The Rock",
       "published": "2026-11-25T17:00:11Z",
       "url": "https://www.youtube.com/watch?v=c7XEBflRi1g"
-    },
-    {
-      "promotion": "WWE",
-      "video_id": "wtB1l5hVghs",
-      "title": "Nobody should have to watch their friend go through that 😂",
-      "published": "2026-11-25T16:00:29Z",
-      "url": "https://www.youtube.com/watch?v=wtB1l5hVghs"
     }
   ]
 }
