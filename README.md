@@ -1,3 +1,31 @@
+# WrestleWire Global — Current Release (26 November 2026)
+
+**Live website:** https://wrestlewire-site.yuvraajsingh1155.workers.dev/
+
+**Implementation report:** [Global Redesign Audit — 26 Nov 2026](GLOBAL_REDESIGN_AUDIT_2026-11-26.md)
+
+**Safety backup:** branch backup/pre-global-redesign-2026-11-26
+
+## Current verified state
+
+- 110 retained article pages, 349 A–Z wrestler profiles and 12 official-source briefs, plus dedicated hubs.
+- Reader and photography migration completed for 460 article/directory pages with 30 safety tests and publication integrity checks passed.
+- Six license-reviewed Wikimedia Commons photo records, publicly credited. Other performers use branded text fallbacks, not misleading fake photography.
+- Six-story homepage spotlight with manual controls and 2-second optional playback; responsive desktop/mobile navigation, light/dark preferences, search and links to full pages.
+- WWE, AEW, Business, History, Latest, Video, Results, Events and Championship source hubs; Results/Events/Championships are source-linked gateways, not fabricated live databases.
+- 4 fully translated Hindi articles and a Hindi landing page, with reciprocal hreflang.
+- Search over 450+ page links; wrestler comparison (16 curated editorial profiles), device-local bookmarks, basic PWA.
+- Google Search Console verified and free Cloudflare Web Analytics in existing setup. Sitemap has 476 canonical URLs.
+- Free official source metadata automation continues; AI draft publishing and AdSense are not activated.
+
+**No new paid purchase or plan has been authorized.** The current feature set uses existing GitHub/Cloudflare infrastructure subject to free-tier and provider usage limits. No guarantee of search rankings, AdSense approval or revenue.
+
+### Important remaining limits
+
+Full independently verified match-history results, championship statistics, every wrestler photograph, full bilingual translation, secure user accounts/admin, moderated fan comments, Google Analytics legal acceptance, AdSense approval, downloaded screenshot artifacts and certified Lighthouse scores are NOT complete. Do not present automatic publisher video metadata as independently fact-checked news.
+
+---
+
 # WrestleWire — Free-First Wrestling Newsroom
 
 Production: https://wrestlewire-site.yuvraajsingh1155.workers.dev/
