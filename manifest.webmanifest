@@ -1,0 +1,19 @@
+{
+  "name": "WrestleWire — Beyond the Bell",
+  "short_name": "WrestleWire",
+  "description": "Independent wrestling news, wrestler profiles and attributed official source updates",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090A0C",
+  "theme_color": "#E31837",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
