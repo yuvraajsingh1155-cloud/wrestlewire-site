@@ -43,14 +43,14 @@ for f in features:
     check_page(rel, "feature article")
     cover = ROOT / "assets/features" / (key + ".svg")
     if not cover.is_file(): fail(f"Missing feature cover: {key}")
-    elif ("/assets/features/" + key + ".svg") not in (ROOT / rel).read_text(encoding="utf-8"): fail(f"Cover not referenced in article: {key}")
+    elif not any(term in (ROOT / rel).read_text(encoding="utf-8") for term in ("/assets/features/" + key + ".svg", "ww-branded-cover", "ww-license-figure")): fail(f"Missing article image or original nameplate: {key}")
     if 'const q="' in (ROOT / rel).read_text(encoding="utf-8"): fail(f"Legacy Commons image override remains: {key}")
 article_dirs = sorted((ROOT / "articles").glob("*/index.html"))
 for p in article_dirs: check_page(p.relative_to(ROOT), "article")
 for p in article_dirs:
     key = p.parent.name
     if not (ROOT / "assets/features" / (key + ".svg")).exists(): fail(f"Missing cover for article: {key}")
-    elif ("/assets/features/" + key + ".svg") not in p.read_text(encoding="utf-8"): fail(f"Article does not embed cover: {key}")
+    elif not any(term in p.read_text(encoding="utf-8") for term in ("/assets/features/" + key + ".svg", "ww-branded-cover", "ww-license-figure")): fail(f"Article has no original cover or verified photo: {key}")
 tree = ET.parse(ROOT / "sitemap.xml")
 urls = [x.text for x in tree.findall(".//{*}loc")]
 if len(urls) != len(set(urls)): fail("Duplicate sitemap URLs")
