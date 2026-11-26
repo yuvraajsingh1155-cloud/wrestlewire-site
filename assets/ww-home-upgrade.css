@@ -1,0 +1,38 @@
+/* WrestleWire premium editorial homepage enhancements */
+:root{--red:#e31837;--yellow:#d4af37}
+body{background:#090a0c!important}
+nav .nav-inner{gap:13px;min-height:70px}
+nav .navlinks{gap:clamp(7px,1vw,16px)}
+nav .navlinks a{display:inline-block;color:#f5f5f5;font-size:12px;font-weight:900;letter-spacing:.035em;text-transform:uppercase;padding:11px 2px}
+nav .navlinks a:hover{color:#e31837}
+.ww-home-search{border:1px solid #5b333e;background:#1b1b20;color:#fff;display:inline-flex;gap:6px;padding:9px 12px;border-radius:9px;font-size:12px;font-weight:900}
+.ww-home-theme,.ww-home-toggle{border:1px solid #65414b;background:#24191e;color:#fff;border-radius:8px;padding:9px 11px;font-size:12px;font-weight:900;cursor:pointer}
+.ww-home-toggle{display:none}
+.ww-home-drawer{display:none;position:absolute;left:0;right:0;top:100%;padding:18px 24px 22px;background:#15161b;border-bottom:2px solid #e31837;box-shadow:0 20px 45px #0008;z-index:45;max-height:75vh;overflow:auto}
+.ww-home-drawer[data-open=true]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 16px}
+.ww-home-drawer a{padding:11px;color:#fff;font-size:14px;font-weight:900;text-decoration:none;border-bottom:1px solid #37333a}
+.ww-breaking{border-top:3px solid #e31837;border-radius:10px;overflow:hidden}
+.ww-slide{position:relative;background:linear-gradient(115deg,#151318,#581421 70%,#111217)}
+.ww-slide img{filter:contrast(1.08) saturate(.88)}
+.ww-slide-fallback{width:100%;height:100%;min-height:270px;background:linear-gradient(115deg,#151318 10%,#771a30 55%,#101114);display:grid;place-items:center;padding:28px;font:900 clamp(35px,5vw,70px)/.95 Impact,sans-serif;color:#f7f3f1;text-align:center}
+.ww-breaking h2{font-size:clamp(32px,4vw,51px)}
+.ww-dots{max-width:260px;margin:auto}.ww-dots button{min-width:25px;min-height:25px;border-radius:999px}
+#ww-pause{background:#2a171f;color:#fff;border:1px solid #5d303d;border-radius:7px;padding:9px 13px;white-space:nowrap}
+#ww-pause[aria-pressed=true]{border-color:#e31837}
+.auto-radar{margin-top:14px}
+.auto-radar .radar-grid{scroll-snap-type:x mandatory;overflow-x:auto;scrollbar-width:thin}
+.auto-radar .radar-card{scroll-snap-align:start}
+.ww-source-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.ww-source-controls button{background:#1e1a20;color:#fff;border:1px solid #693945;border-radius:7px;padding:8px 12px;font-size:12px;font-weight:900;cursor:pointer}
+.ww-source-controls button[aria-pressed=true]{background:#e31837;border-color:#e31837}
+.ww-feature-guide{display:flex;gap:12px;flex-wrap:wrap;margin:17px 0 5px}
+.ww-feature-guide a{padding:11px 16px;background:#202026;border:1px solid #58404a;color:#fff;font-size:12px;font-weight:900;text-decoration:none;border-radius:7px}
+.ww-feature-guide a:hover{border-color:#e31837}
+.card-art{background:linear-gradient(130deg,#51121f,#1c2029)}
+.card-art img{filter:contrast(1.08)}
+.roster-card,.card{will-change:auto}.roster-photo{background:#1c1c22}
+.ww-upgrade-footer-links{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#ffc5cc;margin:13px 0}
+.ww-upgrade-footer-links a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1120px){nav .navlinks{gap:8px}nav .navlinks a{font-size:11px}.launch{display:none}}
+@media(max-width:780px){nav .nav-inner{min-height:63px}.ww-home-toggle{display:inline-flex}.ww-home-theme{display:none}nav .navlinks{display:none}.ww-breaking{border-radius:0}.ww-dots button{min-width:30px;min-height:30px}}
+@media(prefers-reduced-motion:reduce){.ww-slide,.radar-card{animation:none!important;transition:none!important}}
