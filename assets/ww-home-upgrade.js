@@ -5,4 +5,10 @@ function theme(){let v;try{v=localStorage.getItem("ww.theme")||"dark"}catch{v="d
 document.querySelectorAll("[data-ww-theme-toggle]").forEach(b=>b.addEventListener("click",()=>{let v;try{v=localStorage.getItem("ww.theme")||"dark";const a=["dark","light","system"];v=a[(a.indexOf(v)+1)%a.length];localStorage.setItem("ww.theme",v)}catch{v="dark"}theme()}));theme();
 const radar=document.querySelector("#official-sources .radar-grid"),header=document.querySelector("#official-sources h2");
 if(radar&&header&&!document.querySelector(".ww-source-controls")){const bar=document.createElement("div");bar.className="ww-source-controls";const names=["ALL","WWE","AEW"];for(const n of names){const b=document.createElement("button");b.type="button";b.textContent=n;b.setAttribute("aria-pressed",String(n==="ALL"));b.addEventListener("click",()=>{for(const x of bar.children)x.setAttribute("aria-pressed",String(x===b));let count=0;radar.querySelectorAll(".radar-card").forEach(card=>{const yes=n==="ALL"||card.textContent.includes(n+" OFFICIAL VIDEO");card.hidden=!yes;if(yes)count++});const status=document.querySelector("#wwRadarCount");if(status)status.textContent=count+" official uploads";radar.scrollLeft=0});bar.append(b)}const count=document.createElement("span");count.id="wwRadarCount";count.style.cssText="font-size:12px;color:#d6bac1;font-weight:900";count.textContent=radar.querySelectorAll(".radar-card").length+" official uploads";bar.append(count);header.after(bar);}
+
+// Install only when the browser explicitly offers an install prompt.
+let deferredInstall=null;
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredInstall=e;document.querySelectorAll("[data-ww-install]").forEach(b=>b.hidden=false)});
+document.querySelectorAll("[data-ww-install]").forEach(b=>b.addEventListener("click",async()=>{if(!deferredInstall)return;deferredInstall.prompt();await deferredInstall.userChoice;deferredInstall=null;b.hidden=true}));
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("/service-worker.js").catch(()=>{}));
 })();
