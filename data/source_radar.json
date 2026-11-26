@@ -2,6 +2,34 @@
   "entries": [
     {
       "promotion": "WWE",
+      "video_id": "81SzZt81cZ8",
+      "title": "The Rock joins The Nation of Domination: 30 Years of The Rock",
+      "published": "2026-11-26T19:00:16Z",
+      "url": "https://www.youtube.com/watch?v=81SzZt81cZ8"
+    },
+    {
+      "promotion": "AEW",
+      "video_id": "sJvNr9kbVVI",
+      "title": "Austin Creed and Kofi present \"The Holidays on a New Level!\"",
+      "published": "2026-11-26T17:30:06Z",
+      "url": "https://www.youtube.com/watch?v=sJvNr9kbVVI"
+    },
+    {
+      "promotion": "WWE",
+      "video_id": "6AFmY-mmXTk",
+      "title": "Team USA’s photo shoot got tense 😬",
+      "published": "2026-11-26T17:00:21Z",
+      "url": "https://www.youtube.com/watch?v=6AFmY-mmXTk"
+    },
+    {
+      "promotion": "WWE",
+      "video_id": "Q2tFcoyFVhQ",
+      "title": "Team Cargill prepare for war: Survivor Series Vlog",
+      "published": "2026-11-26T17:00:06Z",
+      "url": "https://www.youtube.com/watch?v=Q2tFcoyFVhQ"
+    },
+    {
+      "promotion": "WWE",
       "video_id": "sMh2wtx9d4o",
       "title": "The Rock throws “Stone Cold” Steve Austin off a bridge: 30 Years of The Rock",
       "published": "2026-11-26T16:00:23Z",
@@ -69,34 +97,6 @@
       "title": "Kyle Fletcher vs Andrade El Ídolo | AEW Dynamite Thanksgiving Eve 2026",
       "published": "2026-11-26T04:35:16Z",
       "url": "https://www.youtube.com/watch?v=krOCbgVmd_A"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "ijBdmAmrEWc",
-      "title": "This was NOT what MJF wanted! | AEW Dynamite Thanksgiving Eve 2026",
-      "published": "2026-11-26T04:30:07Z",
-      "url": "https://www.youtube.com/watch?v=ijBdmAmrEWc"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "L0EDgnUS1_0",
-      "title": "This was NOT what MJF wanted! | AEW Dynamite Thanksgiving Eve 2026",
-      "published": "2026-11-26T04:30:03Z",
-      "url": "https://www.youtube.com/watch?v=L0EDgnUS1_0"
-    },
-    {
-      "promotion": "WWE",
-      "video_id": "2xUItZhKVUc",
-      "title": "The Rock and Roman Reigns triumph at WrestleMania XL: 30 Years of The Rock",
-      "published": "2026-11-26T03:00:25Z",
-      "url": "https://www.youtube.com/watch?v=2xUItZhKVUc"
-    },
-    {
-      "promotion": "WWE",
-      "video_id": "HUyHRHaC8O8",
-      "title": "Liv Morgan | WWE x RAM: Show of Power",
-      "published": "2026-11-25T21:26:02Z",
-      "url": "https://www.youtube.com/watch?v=HUyHRHaC8O8"
     }
   ]
 }
