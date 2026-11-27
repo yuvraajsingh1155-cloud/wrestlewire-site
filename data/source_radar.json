@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "promotion": "WWE",
+      "video_id": "KrA84Wuryvs",
+      "title": "Women’s WarGames Match | Road to Survivor Series 2026: WWE Playlist",
+      "published": "2026-11-27T13:00:11Z",
+      "url": "https://www.youtube.com/watch?v=KrA84Wuryvs"
+    },
+    {
+      "promotion": "AEW",
+      "video_id": "dWc2HUrcO8I",
+      "title": "EXCLUSIVE: Hear from the Continental Classic competitors of AEW Dynamite Thanksgiving Eve!",
+      "published": "2026-11-27T12:00:39Z",
+      "url": "https://www.youtube.com/watch?v=dWc2HUrcO8I"
+    },
+    {
       "promotion": "AEW",
       "video_id": "pl3qSjdRrN0",
       "title": "FULL MATCH: Chris Jericho vs Scorpio Sky - AEW World Championship | AEW Dynamite, 11/27/19",
@@ -50,13 +64,6 @@
       "url": "https://www.youtube.com/watch?v=EWm8HAbctVA"
     },
     {
-      "promotion": "AEW",
-      "video_id": "Wv06Akfegbo",
-      "title": "The INSANE conclusion to Konosuke Takeshita vs Bandido in the C2! | AEW Collision Thanksgiving 2026",
-      "published": "2026-11-27T03:35:09Z",
-      "url": "https://www.youtube.com/watch?v=Wv06Akfegbo"
-    },
-    {
       "promotion": "WWE",
       "video_id": "ddJAqk102Q0",
       "title": "Survivor Series: WarGames 2026 Special",
@@ -90,13 +97,6 @@
       "title": "The Rock throws “Stone Cold” Steve Austin off a bridge: 30 Years of The Rock",
       "published": "2026-11-26T16:00:23Z",
       "url": "https://www.youtube.com/watch?v=sMh2wtx9d4o"
-    },
-    {
-      "promotion": "WWE",
-      "video_id": "O_Z2O_U9bDo",
-      "title": "Behind the scenes of Survivor Series: WarGames team photos",
-      "published": "2026-11-26T15:30:11Z",
-      "url": "https://www.youtube.com/watch?v=O_Z2O_U9bDo"
     }
   ]
 }
