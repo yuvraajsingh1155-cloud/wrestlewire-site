@@ -2,6 +2,27 @@
   "entries": [
     {
       "promotion": "WWE",
+      "video_id": "Si6r5_32aq4",
+      "title": "Can't wait to see what Danhausen has in store tonight for his friendsgiving! 🦃👀",
+      "published": "2026-11-27T20:30:21Z",
+      "url": "https://www.youtube.com/watch?v=Si6r5_32aq4"
+    },
+    {
+      "promotion": "AEW",
+      "video_id": "sc--IkewSmk",
+      "title": "EXCLUSIVE: Hear from the Continental Classic competitors of AEW Collision Thanksgiving!",
+      "published": "2026-11-27T20:00:04Z",
+      "url": "https://www.youtube.com/watch?v=sc--IkewSmk"
+    },
+    {
+      "promotion": "WWE",
+      "video_id": "XvxGPSd29Ss",
+      "title": "Survivor Series: WarGames 2026 Preview (Hindi): WWE Now India",
+      "published": "2026-11-27T19:48:08Z",
+      "url": "https://www.youtube.com/watch?v=XvxGPSd29Ss"
+    },
+    {
+      "promotion": "WWE",
       "video_id": "jX2_TSDonas",
       "title": "Sami Zayn doesn't plan on letting the Undisputed WWE Title go anytime soon 😳",
       "published": "2026-11-27T17:49:28Z",
@@ -50,20 +71,6 @@
       "url": "https://www.youtube.com/watch?v=nLGh97xwaGI"
     },
     {
-      "promotion": "WWE",
-      "video_id": "6ntdBDxN-BA",
-      "title": "John Cena hits the 5 Knuckle Shuffle, Down Under style!",
-      "published": "2026-11-27T14:00:18Z",
-      "url": "https://www.youtube.com/watch?v=6ntdBDxN-BA"
-    },
-    {
-      "promotion": "WWE",
-      "video_id": "KrA84Wuryvs",
-      "title": "Women’s WarGames Match | Road to Survivor Series 2026: WWE Playlist",
-      "published": "2026-11-27T13:00:11Z",
-      "url": "https://www.youtube.com/watch?v=KrA84Wuryvs"
-    },
-    {
       "promotion": "AEW",
       "video_id": "dWc2HUrcO8I",
       "title": "EXCLUSIVE: Hear from the Continental Classic competitors of AEW Dynamite Thanksgiving Eve!",
@@ -90,13 +97,6 @@
       "title": "Tommaso Ciampa vs Nick Wayne - C2 Gold League Match | | AEW Collision Thanksgiving 2026",
       "published": "2026-11-27T04:00:31Z",
       "url": "https://www.youtube.com/watch?v=Bbd9gfm5Mc4"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "MlucGjOMUiI",
-      "title": "hear what bro had to say on thanksgiving collision 🤩",
-      "published": "2026-11-27T03:50:11Z",
-      "url": "https://www.youtube.com/watch?v=MlucGjOMUiI"
     }
   ]
 }
