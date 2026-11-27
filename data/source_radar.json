@@ -2,6 +2,13 @@
   "entries": [
     {
       "promotion": "WWE",
+      "video_id": "ddJAqk102Q0",
+      "title": "Survivor Series: WarGames 2026 Special",
+      "published": "2026-11-26T23:00:07Z",
+      "url": "https://www.youtube.com/watch?v=ddJAqk102Q0"
+    },
+    {
+      "promotion": "WWE",
       "video_id": "81SzZt81cZ8",
       "title": "The Rock joins The Nation of Domination: 30 Years of The Rock",
       "published": "2026-11-26T19:00:16Z",
@@ -90,13 +97,6 @@
       "title": "Kyle Fletcher vs Andrade El Ídolo | AEW Dynamite Thanksgiving Eve 2026",
       "published": "2026-11-26T04:35:22Z",
       "url": "https://www.youtube.com/watch?v=1Uv8Yp7OYgc"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "krOCbgVmd_A",
-      "title": "Kyle Fletcher vs Andrade El Ídolo | AEW Dynamite Thanksgiving Eve 2026",
-      "published": "2026-11-26T04:35:16Z",
-      "url": "https://www.youtube.com/watch?v=krOCbgVmd_A"
     }
   ]
 }
