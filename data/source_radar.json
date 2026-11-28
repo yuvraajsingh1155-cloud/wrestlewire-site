@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "promotion": "AEW",
+      "video_id": "T2SmJATmeMQ",
+      "title": "FULL SEGMENT: Chris Jericho introduces \"The Lexicon of Le Champion\" | AEW Dynamite, 12/4/19",
+      "published": "2026-11-28T11:00:05Z",
+      "url": "https://www.youtube.com/watch?v=T2SmJATmeMQ"
+    },
+    {
       "promotion": "WWE",
       "video_id": "JvkT3Oajbuw",
       "title": "The Rock defeats “Stone Cold” Steve Austin at WrestleMania XIX: 30 Years of The Rock",
@@ -90,13 +97,6 @@
       "title": "Tommaso Ciampa vs Nick Wayne - C2 Gold League Match | | AEW Collision Thanksgiving 2026",
       "published": "2026-11-27T04:00:36Z",
       "url": "https://www.youtube.com/watch?v=tYHOYNyKl2M"
-    },
-    {
-      "promotion": "AEW",
-      "video_id": "Bbd9gfm5Mc4",
-      "title": "Tommaso Ciampa vs Nick Wayne - C2 Gold League Match | | AEW Collision Thanksgiving 2026",
-      "published": "2026-11-27T04:00:31Z",
-      "url": "https://www.youtube.com/watch?v=Bbd9gfm5Mc4"
     }
   ]
 }
